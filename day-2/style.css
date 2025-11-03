@@ -1,0 +1,46 @@
+
+*{
+    height: 0;
+    width: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+#vishakha{
+    height: 300px;
+    width: 300px;
+    background-image: url();
+}
+
+#box1{
+    margin: 100px;
+    height: 200px;
+    width: 200px;
+    /* baground linear-gradient it means mix of two color */
+    background: linear-gradient(to top,black,orange, blue);
+}
+#box2{
+    height: 200px;
+    width: 200px;
+    /* baground radial-gradient it means mix of two color */
+    background: radial-gradient(yellow,orange, red);
+}
+#box3{
+    height: 100px;
+    width: 100px;
+    /* baground conic-gradient it means mix of two color */
+    background: conic-gradient(yellow,orange, red);
+}
+
+#outer{
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+}
+
+button{
+    background-color: blue;
+    
+}

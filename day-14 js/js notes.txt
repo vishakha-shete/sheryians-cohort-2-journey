@@ -1,0 +1,61 @@
+learning data types
+1) float - 12.4
+2)number - 12
+3)boolean - true or false
+4)null    - null means empty set - when we dont have any value
+            -//let character = null;
+            -//let data = null;
+            -//let user = null;
+5)symbol  - symbols are unique
+6)array   - we want to use more number then we use array
+              -//[1,2,3,4,5]
+              -//["harsh",[1,3]]
+7)object  - for saving persons one or more information or properties 
+              -{
+                name:"vishakha",
+                age:27,
+                email:"vishaa",
+              }
+8)symbol  - symbol is a special 
+9)undefined - if we make one variable and dont assign any value to the variable            
+            -let a;
+
+10)nan     - if we make operation with number but the answer is not in the numeric form 
+             then it is nan which means not a number  
+                -//visha + 12
+                -//visha * 12
+                -//visha - 12
+
+
+11)infinity - infinity
+            -1/0
+
+12)strings - vishakha / v 
+
+12)ralative and premitive data-types
+ relative value has a brackets
+ premitive is in which we dont have brackets
+
+rEFERANCE dATA-TYPES = ARRAY , OBJECTS , FUNCTIONS
+premitive  DATA-TYOES = NUMBER , BOOLEAN , FLOAT, NAN , UNDEFINES ,NULL ,INFINITY ,SYMBOL ,BIGINT
+
+
+//add comments
+short key control + /
+we add comments im js using two //
+
+data-types
+-data types- data is a type of data-type
+
+
+vishakha - string
+12 - number 
+false true - boolean
+[ ] - array
+{ } - object
+2.5 - float
+
+//float
+it is float value
+2.3
+2:5%

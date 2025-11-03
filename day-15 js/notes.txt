@@ -1,0 +1,64 @@
+-------------------operators---------------------------------
+//arthematic operators
+---> + - / % **
+[+]---> pluss
+[-]---> minus
+[/]---> devide
+[%]---> modulous
+[**]---> exponentiation
+
+12 + 13 = 25
+12 - 13 = -1
+12 * 13 = 156
+12 / 13 = 0.9230769230769231
+12 % 13 = 12
+2 ** 3 = 8
+
+//Assignment operators
+---->  = += -= *= /= %=
+-value ko assign krna it means assignment operator
+
+[=] = equal is used to assign the value
+      let a = 12;
+
+[+=] = make value bigger than perticular value
+      a += 13;
+[-=] = make value smaller than perticular value
+      a -= 13;
+[*=] = it makes multiplication between two operators
+[/=] = it makes devision between two operators
+[%=] = it find out mod between two operators
+
+
+//comparison operator
+-----> == === != !== > <  >= <=
+
+[==] = not strict compare {never use this} check lhs rhs
+[===] = strict compare    {allways use this} check lhs rhs
+[!=] = not strict compare {never use this} check lhs rhs both are not same
+[!==] = strict compare    {allways use this} check lhs rhs both are not same
+[>] =  greatter
+[<] =  less
+[>=] = greater or same
+[<=] = less or same
+
+
+//logical operators
+---> it gives ture and false value
+--->  && || !
+
+[&&] = true && true = true
+       false && true = false
+       true && false = false
+       false && false = false
+
+[||] = true && true = true
+       false && true = true
+       true && false = true
+       false && false = false
+
+[!] = it chaanges the value false to true or true to false
+
+
+//ternary operator 
+---> 

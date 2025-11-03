@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/* this is position absolute portion */
+#car1{
+    width: 200px;
+    height: 300px;
+    background-color: red;
+}
+#car2{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(0, 255, 76);
+}
+#car3{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(49, 39, 194);
+}
+
+
+/* this is position absolute portion */
+
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+}
+
+#small{
+    position: relative;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+}
+
+/* this is position fixed portion */
+
+
+/* this is position sticky portion */
+#parent{
+    height: 100%;
+    background-color: gray;
+}
+
+#child{
+    width: 100%;
+    background-color: red;
+}

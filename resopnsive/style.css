@@ -1,0 +1,199 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/* when we use pixel the pixel size is fixed */
+h1{
+    font-size: 50px;
+}
+
+/* i make changes on box but it cannot reflect on inner box the pixel is fixed */
+/* pixel fixed hote hai bade chote nahi hote its depend on screen size */
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: skyblue;
+}
+
+#innerbox{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+}
+
+/* percentege takes a width and hight compaire to screen */
+#parent{
+    height: 400px;
+    width: 400px;
+    background-color: crimson;
+}
+#child{
+    height: 50%;
+    width: 50%;
+    background-color: black;
+}
+
+/* pixel-fixed */
+/* percentage-depending on parent */
+/* vw-viewport width  gepending upon screen width*/
+/* vh-viewport height  gepending upon screen height*/
+
+/* QA */
+/* Q. why perfect sqare make */
+/* because pixel sized is fixed */
+
+#box1{
+    height:300px ;
+    width: 300px;
+    background-color: crimson;
+}
+/* Q. why perfect sqare not make */
+/* because percentage is dependant on a screen siza/parent */
+
+#box2{
+    height:40% ;
+    width: 40%;
+    background-color: crimson;
+}
+
+/* vw is dependant on width */
+
+h2{
+    font-size: 10vw ;
+}
+/* vh is dependant on height */
+
+h3{
+    font-size: 10vh ;
+}
+
+
+
+/* v-max is similiar to vw but when we minimize the screen its stope when screen is stop */
+
+h4{
+    font-size: 20vmax;
+}
+
+/* em is dependant on its parent size */
+/* parent ki value change krenge to child ki bhi chnge hogi */
+#parent1{
+       height: 300px;
+       width: 500px;
+       background-color: aqua;
+       font-size: 10px;
+}
+#parent1 h1{
+    font-size: 3em;
+}
+#parent1 h3{
+    font-size: 2.5em;
+
+}
+#parent1 p{
+    font-size: 1.5em;
+
+}
+
+/* rem=16px (accor=ding to root) */
+#parent2{
+    height: 300px;
+    width: 500px;
+    background-color: aqua;
+    font-size: 10px;
+}
+#parent2 h1{
+ font-size: 1rem;
+}
+#parent2 h3{
+ font-size: 2rem;
+
+}
+#parent2 p{
+ font-size: 3rem;
+}
+
+/* ch contains a aphabet counting if 10 its only shows a 10 alphabet in a width */
+#lorem h1{
+    width: 10ch;
+}
+
+/* lh takes a space as a line if two line its takes two line space */
+#lorem h2{
+    margin-top: 1lh;
+}
+
+#parent3{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+}
+
+#child1{
+    height: 200px;
+    width: 200px;
+    background-color:aquamarine;
+    flex-shrink: 0;
+    border: solid black 3px;
+
+}
+#child2{
+    height: 200px;
+    width: 200px;
+    background-color:rgb(66, 190, 149);
+    flex-shrink: 0;
+    border: solid black 3px;
+
+}
+#child3{
+    height: 200px;
+    width: 200px;
+    background-color:rgb(224, 84, 201);
+    flex-shrink: 0;
+    border: solid black 3px;
+
+}
+
+#parent4{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 20% 25% 25% 25%;
+}
+
+#parent4 #child4{
+    background-color: blueviolet;
+    border: solid white 3px;
+
+}
+
+#parent4 #child5{
+    background-color: rgb(65, 154, 170);
+    border: solid white 3px;
+
+
+}
+
+#parent4 #child6{
+    background-color: rgb(127, 172, 97);
+    border: solid white 3px;
+
+}
+
+#parent4 #child7{
+    background-color: blueviolet;
+    border: solid white 3px;
+
+}

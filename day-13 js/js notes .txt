@@ -1,0 +1,82 @@
+-------------------------------------day-2--------------------------------------------
+
+
+topics of the day
+
+//statements expression
+
+in old javascript we right variable like
+---ex. var b = 12;
+
+
+and in new javascript we right code like
+----ex. let b = 13;
+
+probably we have ability to use both but mostly
+let is usable so we use let alwayss this is the new part 
+of js and lot of things has been fixed using js
+
+
+
+{
+    var a =12;
+}
+
+if we create variable in curly brackets then the variable 
+acces over all it can be accesable outer to the brackets this
+is the problem in js so the problem fixes and we use let which is
+only accesable in curly brackets
+
+
+{
+    let a = 12;
+}
+
+//we use more let not a var
+//error is not enemy
+//but the real enemy is one code which has no error and the code right wrong then
+the biggest problem
+//let fixes some good things which var dosent
+
+let a = 1;
+let b = 2;
+
+const =3; we use const when value dont change the value is constant if we try to change the value of var then its not possible
+
+
+console .log (a);
+console .info (a); 
+
+both are similiar but some browesrs shows console.info in different way
+it shows a i sign front of them
+
+
+console.table({name:"vishu"});
+
+
+
+prompts....
+
+prompt sends a alert message
+let nm = prompt ("name?");
+
+
+//alert
+alert();
+
+strimgs 
+"if we right something in double codes is called string"
+//""
+
+how to deside string or not string
+if we right a special caracter in double codes is called sometring
+
+slice...?
+"vishakha shete".slice(2,4)
+
+//``template strings;
+`vishakha ${3+5}`
+
+
+
+

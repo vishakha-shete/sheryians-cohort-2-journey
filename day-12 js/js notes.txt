@@ -1,0 +1,150 @@
+//introduction to javascript
+//why it is important?
+//what can it do for you ?
+//we have to use script tag to attach js in index.html
+//learn to run the js on browser
+//var , let ,const ..!
+//console... prompt alert..!
+//what is string?
+//slice, template strings split ,replace,includes how thi all
+  works we learnt thiss..?
+
+
+
+
+***//introduction to javascript
+- javascript is scripting language
+- compuers understand the binary langauge
+  which is in 0/1 zeroes and ones format
+- 01010101010101 format -compuers understand the 01 language
+  but we dont understand the cmps lang we understand english
+- we right a code in english and the computer translate them into binary
+--->i am vishakha-->translator-/interpriter/compiler--->010101/binary lang
+- javascript a langauge which we right and then cmps convert them into 0101101
+- cmps is very powerfull if we use them then our work is getting too easy we have to just right the code and cmps do all the efforts
+- we dont understand the cmps lang and cmps also dont understand our
+  langauge then make one traanslater in which the translator convert and double and flip also
+
+
+
+* - js devloped by brendan eich
+  - he works in netscape company
+  - he ceate the langauge betweeen 15 to 16 days
+  - the langauge create in less time duration thats why lot of
+    ishues and errors ,bugs accurs 
+  - while fixing this all ishues and bugs js launches a lot of versions
+  - after lot of errors and bug fixing the biggest version came out which name is --es6 
+  - after es6 the lot of version come but the es6 is the biggest change ever in javascript 
+    history beacuase js has changed completely 
+  - which means all the problems and bugs and errors in js has been fixed
+  - js has created only for browser
+  - js work on browser
+  - we connect js file with index.html file
+  - when the html file runss then only your js file also run
+
+
+
+
+ *** //why it is important?
+ - js is important because on the website from animations to interaction and any theame time engagement 
+   creation we use javascript
+
+
+*** //what can it do for you ?
+-It creates engagement, interactions, animations, validation 
+there is a lot of things which u can do uing the javascript 
+
+
+***//we have to use script tag to attach js in index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>2nd class of js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>hello</h1>
+    <script src="script.js"></script>
+    *-like this we can attached the js file
+</body>
+</html>
+
+
+***//var , let ,const ..!
+ - console.log("heyyyy");
+   it is use for printinting the word
+
+  - console.error("heyyyy");
+    it used for showing a error
+
+   - console.warn("heyyyy");
+     it used for warning
+
+
+
+***//console... prompt alert..!
+
+  -prompt()
+     prompt is something in which we have to enter
+     some key before go through the webpages
+
+  -prompt("name...?")   
+  -when we want some spacific things to enter...!
+
+  -Alert("name...?")
+  it shows the alert msg which we want and its work like a
+  prompt
+
+
+
+***//what is string?
+
+the letter, the word,combination,sentense we right in double codes
+callled string
+
+EX:- "" =double codes
+
+
+
+***//slice, template strings split ,replace,includes how thi all
+  works we learnt thiss..?
+* slice
+  "how are u vishakha".slice(4.12)
+  it takes alphabet outer from index 4 and to 12
+
+* template strings
+  `` --> this is the backtick
+         templete string
+         (templete literal)
+
+* split
+  "vishakha take a step and work hard".split("a")         
+    -after this the "a" will not show
+
+ "vishakha take a step and work hard".split("a").joind() 
+  -if we used joined in it then it joined the string        
+
+
+
+* replace
+   replace
+  -"vishakha you need do to impoossible efforts".replace ('a',"vishu")
+     it rplace only one alphabet
+
+   replaceAll
+  -"visa loa vocha aloka".replaceAll('a',"visha")
+    we replaceAll similiar the alphabet with letter
+
+
+
+* includes
+
+ -"visa loa vocha aloka".includes("a")
+   it shows value true or false if letter
+   present then it show true otherwise false
+
+
+   1) ekdum simple padhana and points mein chije likhna and make it very easy and straighteforward 
+   2) ekadam hinglish easy langauge me 
