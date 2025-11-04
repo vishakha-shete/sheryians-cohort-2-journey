@@ -61,4 +61,36 @@
 
 
 //ternary operator 
----> 
+---> condition ? do this : do that
+
+12>13 ? console.log("hey") : console.log("hello");
+
+
+
+//Type checking operators
+---> typeof 
+-we use type of to check its type
+---> instanceof
+
+
+//string operator
+--- {+} (for concatination)addition
+
+//spread/ rest operator 
+---> ......
+
+
+//nullish coalising operator
+12>13 ?? console.log(("sorry")
+)
+
+//optional chaining
+?. (safe access to nested value)
+
+
+//-vriable hoisting in js
+-- hoisting means before making the variable we can use the varible
+-- declaration is the the top of the file
+-- initialization is staying where varible present
+-- so ur varible dosent give any error because its allready exist
+var b =12;

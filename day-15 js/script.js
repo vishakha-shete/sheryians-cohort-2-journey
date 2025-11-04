@@ -18,5 +18,12 @@ a %= 2;
 
 //comparison operator
 
+12>13 ? console.log("hey") : console.log("hello");
+//hello
 
+122>13 ? console.log("hey") : console.log("hello");
+//hey
 
+//Type checking operators
+ console.log (b);
+ var b= 12;
