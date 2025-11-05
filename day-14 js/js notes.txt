@@ -52,6 +52,16 @@ vishakha - string
 12 - number 
 false true - boolean
 [ ] - array
+
+
+
+
+
+
+
+
+
+
 { } - object
 2.5 - float
 
