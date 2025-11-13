@@ -5,14 +5,14 @@ var h2 = document.querySelector('h2')
 
 
 var a = 0;
-increament.addEventListener('click',function(){
+increament.addEventListener('click', function () {
     a++
     h1.innerHTML = a
 });
 
 
 var b = 0;
-decreament.addEventListener('click',function(){
+decreament.addEventListener('click', function () {
     b--
     h2.innerHTML = b
 });
