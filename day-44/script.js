@@ -24,7 +24,13 @@ var body = document.querySelector('body')
 
 body.appendChild(btn)
 
+var div = document.createElement('div')
+div.style.height='100px'
+div.style.width='100px'
+div.style.backgroundColor='royalblue'
+var body = document.querySelector('body')
 
+body.appendChild(div)
 
 
 
