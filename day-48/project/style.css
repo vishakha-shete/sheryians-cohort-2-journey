@@ -1,0 +1,29 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+    cursor: none;
+}
+
+#main{
+    height: 200%;
+    width: 100%;
+    background-color: #161718;
+}
+h2{
+    font-size: 40px;
+    color: white;
+}
+#cursor{
+    height: 80px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+
+}
