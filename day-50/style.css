@@ -15,8 +15,30 @@ main {
   height: 100%;
   width: 100%;
   background: linear-gradient(to right bottom, rgb(26, 26, 26), rgb(35, 35, 35), black);
-  padding: 20px;
+  padding: 20px 20px;
   overflow: auto;
+}
+main .mute {
+  background-color: #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+main .mute i {
+  font-size: 22px;
+  color: #fff;
+  pointer-events: none;
+}
+main .mute:active {
+  scale: 0.92;
 }
 main section {
   height: 100%;
@@ -24,6 +46,7 @@ main section {
   background-color: black;
   margin: auto;
   border-radius: 10px;
+  overflow: hidden;
 }
 main .all-reels::-webkit-scrollbar {
   display: none;
@@ -103,6 +126,20 @@ main .all-reels .reel .right {
   right: 0;
   bottom: 12%;
   background: linear-gradient(to right, transparent, rgb(22, 22, 22));
+}
+main .all-reels .reel .right > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  cursor: pointer;
+}
+main .all-reels .reel .right > div > div h4 {
+  pointer-events: none;
+}
+main .all-reels .reel .right > div > div h6 {
+  pointer-events: none;
 }
 main .all-reels .reel .right i {
   font-size: 25px;

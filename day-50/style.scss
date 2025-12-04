@@ -16,8 +16,35 @@ main {
     height: 100%;
     width: 100%;
     background: linear-gradient(to right bottom, rgb(26, 26, 26), rgb(35, 35, 35), black);
-    padding: 20px;
+    padding: 20px 20px;
     overflow: auto;
+
+    .mute {
+        background-color: #333;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute; // IMPORTANT
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 10;
+    
+        i {
+          font-size: 22px;
+          color: #fff;
+          pointer-events: none; // allows click through icon to button
+        }
+    
+        &:active {
+          scale: 0.92;
+        }
+      }
+
+
 
 
     section {
@@ -26,6 +53,7 @@ main {
         background-color: black;
         margin: auto;
         border-radius: 10px;
+        overflow: hidden;
 
     }
 
@@ -114,10 +142,26 @@ main {
                 gap: 15px;
                 width: 40px;
                 position: absolute;
-                // transform: translateX(100%);
                 right: 0;
                 bottom: 12%;
                 background: linear-gradient(to right, transparent, rgb(22, 22, 22));
+
+
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    cursor: pointer;
+
+                   >div h4{
+                        pointer-events: none;
+                    }
+                   >div h6{
+                        pointer-events: none;
+                    }
+                }
 
                 i {
                     font-size: 25px;
@@ -130,6 +174,11 @@ main {
                 .love{
                     color: red;
                 }
+
+
+
+
+
 
 
             }
