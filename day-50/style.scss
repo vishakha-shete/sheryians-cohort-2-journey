@@ -62,7 +62,9 @@ main {
     }
 
     .all-reels {
+        scroll-snap-type: y mandatory;
         height: 100%;
+        overflow-y: scroll;    
         width: 100%;
         margin: auto;
         overflow: auto;
@@ -72,7 +74,9 @@ main {
 
 
         .reel {
-            height: 100%;
+            scroll-snap-align: start;
+            height: 100%;  
+            position: relative;
             width: 100%;
             position: relative;
             background-color: lightblue;
