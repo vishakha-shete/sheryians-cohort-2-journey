@@ -64,20 +64,54 @@ h1{
     height: 300px;
     border-radius: 20px;
     background-color: white;
-    animation: changeBackgroundColor 6s 5 alternate;
+    animation: changeBackgroundColor 6s  alternate;
  }
+
+ /* discrete properties in css */
+
   @keyframes changeBackgroundColor{
     from{
         background-color: white;
         scale: 1;
+        transform: translateX(0px)scale(1);
+        visibility: visible;
 
     }
     to{
         background-color: rgb(153, 51, 93);
         scale: 0.7;
+        transform: translateX(100px)scale(0.5);
+        visibility: hidden;
 
     }
 
   }
 
- 
+  /* @property learning about properties */
+/* color,length,angle */
+
+
+.property{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: var(--bgcolor);
+    animation: animatebgcolor 5s;
+}
+ @property --bgcolor {
+    syntax: "<color>" ; 
+     /* says the type and name of the properties */
+    initial-value: red;
+    inherits: false;
+ }
+
+ @keyframes animatebgcolor {
+    from{
+        --bgcolor : red;
+    }
+    to{
+        --bgcolor : rgb(32, 15, 190);
+    }
+    
+ }
