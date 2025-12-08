@@ -1,0 +1,46 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+}
+
+.red {
+    background-color: red;
+    anchor-name: --some-anchor;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+
+/* anchor contains a two element first one is target element and second one is position element */
+.anchor {
+    background-color: #ffff;
+    border-radius: 10px;
+    position: absolute;
+    position-anchor: --some-anchor;
+}
