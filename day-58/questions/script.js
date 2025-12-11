@@ -158,7 +158,7 @@ let product = {
     price: "150",
     discountedprice: function () {
         return this.price - 50;
-    } 
+    }
 }
 
 console.log(product.discountedprice());
@@ -185,16 +185,16 @@ console.log(product.discountedprice());
 // 	5.	Create two different car objects from the same class and verify that their data is different.
 
 class Car {
-    constructor(brand,speed) {
-        this.brand= brand;
-        this.speed= speed;
-    }   
-    drive () {
-        return(this.brand + this.speedB);
+    constructor(brand, speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+    drive() {
+        return (this.brand + this.speedB);
     }
 }
-let car1 = new Car("hyundai",100);
-let car2= new Car("maroti",90);
+let car1 = new Car("hyundai", 100);
+let car2 = new Car("maroti", 90);
 
 // SECTION 3: Constructor and this keyword
 // 	7.	Create a Student class whose constructor accepts name and roll number.
@@ -213,14 +213,14 @@ let car2= new Car("maroti",90);
 // 7.	Create a Student class whose constructor accepts name and roll number.
 // // Add a method introduce that prints both values.
 
-class Student{
-    constructor(name,rollnumber){
+class Student {
+    constructor(name, rollnumber) {
         this.name = name;
         this.rollnumber = rollnumber;
 
     }
-    introduce(){
-        return this.name + " - " +  this.rollnumber;
+    introduce() {
+        return this.name + " - " + this.rollnumber;
 
     }
 }
@@ -231,14 +231,14 @@ class Student{
 // One method using an arrow function
 // Inside both, print this and observe the difference.
 
-let student1 = new Student("rohan",40);
-console.log ( student1.introduce ());
+let student1 = new Student("rohan", 40);
+console.log(student1.introduce());
 
-let obj={
-    sayName:function(){
+let obj = {
+    sayName: function () {
         console.log(this);
     },
-    sayArrowName:()=>{
+    sayArrowName: () => {
         console.log(this);
     }
 }
@@ -260,8 +260,8 @@ obj.sayArrowName();
 //before es6 constructor function make like this
 
 // 	10.	Create a User constructor function (do not use class syntax).
-function User(){
-    this.name ="vishakha";
+function User() {
+    this.name = "vishakha";
 }
 let a1 = new User();
 
@@ -271,9 +271,9 @@ let a1 = new User();
 // First, inside the constructor
 // Then, move the method to the prototype
 
-function User1(){
-    this.name ="vishakha";
-    this.login=function(){
+function User1() {
+    this.name = "vishakha";
+    this.login = function () {
         console.log("logge-din");
     }
 }
@@ -283,10 +283,10 @@ a2.login();
 
 // 	12.	Create two User objects and compare their login methods using equality.
 
-function User2(val){
-    this.name =val;
+function User2(val) {
+    this.name = val;
 }
-User2.prototype.loggedin=function(){
+User2.prototype.loggedin = function () {
     console.log("loggednot-in");
 }
 let a3 = new User2("lokesh");
@@ -309,36 +309,36 @@ a4.loggedin();
 
 // 	13.	Create a function that prints this.name.
 
-function abcd(){
+function abcd() {
     console.log(this.name);
 }
 abcd();
 
 // 	14.	Create an object that contains a name property.
 // Use call to run the function using the object
-let obj1={
-    name:"using call function",
+let obj1 = {
+    name: "using call function",
 }
 abcd.call(obj1);
 
 // Use apply to run the function using the object
-function abcde(a,b,c,d,e){
+function abcde(a, b, c, d, e) {
     console.log(this.name)
 }
 abcde();
-let obj2={
-    name:"using apply method",
+let obj2 = {
+    name: "using apply method",
 };
-abcd.apply(obj2,[1,2,3,4,5])
+abcd.apply(obj2, [1, 2, 3, 4, 5])
 
 
 // Use bind to create a new function and then call it
-function abcde(a,b,c,d,e){
+function abcde(a, b, c, d, e) {
     console.log(this.name)
 }
 abcde();
-let obj3={
-    name:"using bind method",
+let obj3 = {
+    name: "using bind method",
 };
-let func= abcde.bind(obj3);
+let func = abcde.bind(obj3);
 func();
