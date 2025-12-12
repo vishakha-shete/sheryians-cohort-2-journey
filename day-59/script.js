@@ -170,5 +170,3 @@ function icecreamLaao(address, cb){
 
 icecreamLaao("amaravati",function(ice){
   console.log(ice);
-
-});
