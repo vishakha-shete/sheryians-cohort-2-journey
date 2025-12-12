@@ -155,17 +155,58 @@ async function abcd(){
 abcd();
 
 
-function not(){
-    let prm2 = new promise ((resolve,reject)=>{
+function getNum(){
+    let prm2 = new Promise ((resolve,reject)=>{
         setTimeout(() => {
             let num = Math.floor(Math.random()*10);
             if (num<5){
-                resolve
+                resolve(true);
             }else{
-                reject();
+                reject(false);
             }
         }, 3000);
     
     });
 }
-not();
+async function abcde(){
+    let v = await getNum();
+    console.log(v);
+}
+abcde();
+
+
+// ### Example: Fetch API with Promises
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error:", error));
+
+
+// ### Example: fetch wrapped in a callback
+
+function fetchData(url, callback) {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => callback(null, data))   // success callback
+    .catch(error => callback(error, null)); // error callback
+}
+
+// usage
+fetchData("https://jsonplaceholder.typicode.com/posts/1", (err, data) => {
+  if (err) {
+    console.error("Error:", err);
+    return;
+  }
+
+  console.log("Data:", data);
+});
+
+
+
+// ## Why use Promises?
+
+// - To avoid callback hell
+// - Cleaner async code
+// - Better error handling
+// - Easy chaining
