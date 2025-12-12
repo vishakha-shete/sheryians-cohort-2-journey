@@ -92,10 +92,10 @@ abcd(function (fn) {
 
 
 //
-function vishakha(fn){
+function vishakha(fn) {
   fn();
 }
-vishakha(function(fn){
+vishakha(function (fn) {
   console.log("understand");
 });
 
@@ -106,7 +106,7 @@ function abcd(fn) {
     console.log("hey");
     fn2(function (fn4) {
       console.log("lettel bit scarry but trying to understand");
-      fn4(function(fn6){
+      fn4(function (fn6) {
         console.log("loving the function");
         fn6();
       });
@@ -119,7 +119,7 @@ abcd(function (fn1) {
     console.log("i am in love with function");
     fn3(function (fn5) {
       console.log(5 + 6);
-      fn5(function(){
+      fn5(function () {
         console.log("love coding");
       });
     });
@@ -140,33 +140,34 @@ abcd(function (fn1) {
 //gharAaajaao(address,cb)
 
 // Example-1
-function amitSeDetailsLaao(address,cb){
+function amitSeDetailsLaao(address, cb) {
   console.log("feaching details....!");
   setTimeout(() => {
-    cb({lat:33.3,lang:55.5});
+    cb({ lat: 33.3, lang: 55.5 });
   }, 3000);
 }
-amitSeDetailsLaao("indrapuri 231-B Block",function(details){
+amitSeDetailsLaao("indrapuri 231-B Block", function (details) {
   console.log(details);
 })
 
 // Example-2
-function amit(adress,cb){
+function amit(adress, cb) {
   console.log("yess working");
- setTimeout(() => {
-  cb({lang:3455,lat:3535});
- }, 4000);
+  setTimeout(() => {
+    cb({ lang: 3455, lat: 3535 });
+  }, 4000);
 }
-amit("nawsasal",function(details){
+amit("nawsasal", function (details) {
   console.log(details);
 
 });
 
 
 // Example-3
-function icecreamLaao(address, cb){
+function icecreamLaao(address, cb) {
   cb("icecreame is ready")
 }
 
-icecreamLaao("amaravati",function(ice){
+icecreamLaao("amaravati", function (ice) {
   console.log(ice);
+});
