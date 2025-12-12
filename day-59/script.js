@@ -171,3 +171,37 @@ function icecreamLaao(address, cb) {
 icecreamLaao("amaravati", function (ice) {
   console.log(ice);
 });
+
+
+// ##  Callbacks  
+// A **callback** is a function passed as an argument to another function.
+
+// ### **Example**
+// ```js
+function greet(name, cb) {
+  console.log("Hello " + name);
+  cb();
+}
+
+greet("Anubhav", () => {
+  console.log("Welcome!");
+});
+
+
+// ##  Callback Hell  
+// Callback hell happens when callbacks become **nested, messy, and unreadable**.
+
+// ###  Example: Callback Hell (Pyramid of Doom)
+
+getData(function(data1) {
+  getMoreData(data1, function(data2) {
+    getMoreMoreData(data2, function(data3) {
+      getFinalData(data3, function(result) {
+        console.log(result);
+      });
+    });
+  });
+});
+
+// Looks like a **pyramid of doom**  
+// Too many nested levels → hard to read, debug, and maintain.
