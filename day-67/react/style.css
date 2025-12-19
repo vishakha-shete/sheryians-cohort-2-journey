@@ -14,3 +14,26 @@ body{
     width: 400px;
     background-color: aqua;
 }
+
+#container{
+    background-color: aqua;
+}
+
+#box{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+}
+#circle{
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+    border-radius: 50%;
+}
+#paro{
+    background-color: pink;
+    height: 500px;
+    width: 500px;
+
+
+}

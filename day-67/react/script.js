@@ -25,14 +25,28 @@
 //     delay:1
 // })
 
+import parent from './parent.js';
 
-var h1 = React.createElement('h1',null,'main hoon vish')
-var h2 = React.createElement('h2',null,'main hoon sarthak')
+const root = ReactDOM.createRoot(document.querySelector('#paro'))
+root.render(parent())
+
+
+var h1 = React.createElement('h1', null, 'main hoon vish')
+var h2 = React.createElement('h2', null, 'main hoon sarthak')
+var div = React.createElement('div', { id: parent }, [h1, h2])
 var container = document.querySelector('#container')
 var Root = ReactDOM.createRoot(container)
-Root.render(h1)
+Root.render(div)
 
 
-var h2 = React.createElement(h2,null,'hey how are u')
-var root = ReactDOM.createRoot(document.querySelector('#vish'))
-root.render(h2)
+var div = React.createElement('div', null, 'i know your wish')
+var container = document.querySelector('#vish')
+var Root = ReactDOM.createRoot(container)
+Root.render(div)
+
+
+// function poho() {
+//     return React.createElement('poho', null, 'helllo')
+// }
+// var foot = ReactDOM.createRoot(document.querySelector('#poho'))
+// root.render(poho())
