@@ -1,0 +1,31 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+.vish{
+  height: 400px;
+  width: 400px;
+  background-color: rebeccapurple;
+}
+#nav{
+  width: 100%;
+  height: 70px;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sec{
+  height: 80vh;
+  width: 100%;
+  background-color: blueviolet;
+}
