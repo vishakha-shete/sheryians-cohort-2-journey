@@ -1,0 +1,6 @@
+TALLWIND CSS
+-tailwind css is library 
+-tailwind css is a utility first framework
+
+UTILITY FIRST FRAMEWORK MEANS EXACTLY WHAT 
+- IN in tailwind developers allready made lot of classes 
