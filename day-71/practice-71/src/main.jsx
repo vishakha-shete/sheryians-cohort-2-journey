@@ -7,6 +7,6 @@ import Card from './assets/Components/card.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Card />
+    {Card(10,20)}
   </StrictMode>,
 )
