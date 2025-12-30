@@ -11,7 +11,7 @@ const card = ( a,b ) => {
       <h1>{age},{user}</h1> 
       <h1 className='font-bold bg-pink-900'>{user}</h1>
       {arr.map(function(elem){
-        return <h1>{elem*3} is our choise</h1>
+        return <h1>{elem*3} is our choise {a+b} </h1>
       })}
       {arr2.map(function(elem){
         return <h1>{elem}</h1>
