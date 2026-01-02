@@ -1,0 +1,40 @@
+its been a lot of days im trying to be consistent but my brain is not properly and im thinking lot of thinks thats why
+today im starting with day 72
+
+now we are going to recall which toppics till now we learn
+1)- what is react
+2)- cdn ki help se react usage (to understand core of ract and
+     react-dom)
+3)- how react works
+4)- creating folder with vite
+5)- folder structure
+6)- components
+7)- props/props drilling
+8)- tailwind css
+
+now we are going to discuss about what we learn next
+
+9) how to call the functions
+  -function calling in react
+10) usestate hook 
+11) form handlling
+12) two way binding
+13) basic project
+14) basic project through multiple components
+15) LOcal storage
+16) basic project through multiple components
+17) api handlling (Axios)
+18) useEffect
+19) project
+20) useRef
+21)Reacr Router dom
+22) projet with it
+23) contextAPI
+24) usecallback useContext useMemo
+25) custome Hook
+26) Tenstack
+27) jest ,cypress
+28) Redux Toolkit
+
+
+components: components means different different part of the picture
