@@ -7,3 +7,14 @@ button{
   font-size: 30px;
   font-weight: 600;
 }
+
+.box{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  background-color: palevioletred;
+  
+}
