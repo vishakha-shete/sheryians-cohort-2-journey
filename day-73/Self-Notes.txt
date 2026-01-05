@@ -1,0 +1,7 @@
+- Today I am learning the Usestate in React-jsx
+- firstly before understanding usestate we have to learn about state
+- so basically state means what
+- main case of react is state mnagement
+- state management means
+ - in REact state management means we can manage react elements current stage
+   previous stage  and the next stage
