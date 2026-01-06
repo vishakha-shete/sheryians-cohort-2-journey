@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-
-
+import Washroom from './components/Washroom.jsx';
 const App = () => {
 
 
@@ -32,6 +31,24 @@ const App = () => {
   setMarks(newMarks)
   }
 
+   // 6
+
+   const [gender, setGender] = useState('Male')
+   function changeGender(){
+    if (gender=='Male'){
+      setGender ('Female')
+    }else{
+      setGender('Male')
+   }
+  }
+   return(
+    <div className='parent'>
+    <h1>{gender}</h1>
+    <button onClick={changeGender}>change gender</button>
+\   <Washroom user={gender} />
+    
+    </div>
+   )
 
 
   const changeking = () => {
@@ -99,6 +116,22 @@ const App = () => {
         <button onClick={graceStudent}>Give them grace </button>
        </div>
 
+
+{/* 6 
+    
+        <div className='gender'>
+          <div >
+            <input type="radio" name="gender" id='female' />
+            <label htmlFor="female"> Female</label>
+            </div>
+
+            <div>
+            <input type="radio" name="gender" id='male' />
+            <label htmlFor="male"> Male</label>
+          </div>
+        </div> */}
+
+        <Mens />
 
     </div>
 
