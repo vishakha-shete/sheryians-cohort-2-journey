@@ -1,0 +1,4 @@
+Today i am going to learn about the form handling and to way binding in react
+
+*FORM HANDLLING
+*TWO WAY-BINDING
