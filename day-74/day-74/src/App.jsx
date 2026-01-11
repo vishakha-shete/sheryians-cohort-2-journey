@@ -8,10 +8,16 @@ const App = () => {
   // 2  
   const submitHandler = (e)=>{
     e.preventDefault()
-    console.log('form submittted');
-
-
+    const oldusers = [...allusers]
+    oldusers.push(username)
+    sealltusers(oldusers)    
+    console.log(oldusers);
+    setUsername('')
   }
+
+  const [username, setUsername ] = useState('')
+  const [allusers, sealltusers] = useState(['vish'])
+   
   return (
 
     // 1
@@ -20,17 +26,31 @@ const App = () => {
       <button onClick={()=>{
         setNum(num + 1)
       }} >increased</button>
-      <div>
 
-      {/* 2 */}
+
+    {/* 2 */}
+      <div>
         <form onSubmit={(e)=>{
           submitHandler(e)
           }}>
-          <input type="text" placeholder='enter your name' />
+          <input type="text" placeholder='enter your name'
+                    value={username} 
+                    required 
+                    onChange={(e)=>{
+                      setUsername(e.target.value);
+                    }}
+          />
           <button>submit</button>
         </form>
+
+        {allusers.map(function(elem,idx){
+          return <h4 key={idx} >{elem}</h4>
+
+        })}
       </div>
     </div>
+
+
   )
 }
 

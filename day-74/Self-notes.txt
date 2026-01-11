@@ -6,3 +6,7 @@ Today i am going to learn about the form handling and to way binding in react
 //form handling means what
 -form handling means handling the forms in which user which value fills in the form
 -those things which are user fills in the form handling those thing are called form handling
+
+
+//two-way-binding 
+  -  
