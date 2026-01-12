@@ -8,15 +8,18 @@ const App = () => {
   // 2  
   const submitHandler = (e)=>{
     e.preventDefault()
+    console.log(username,email);
     const oldusers = [...allusers]
-    oldusers.push(username)
+    oldusers.push({username,email})
     sealltusers(oldusers)    
     console.log(oldusers);
     setUsername('')
+    setemail('')
   }
 
   const [username, setUsername ] = useState('')
   const [allusers, sealltusers] = useState(['vish'])
+  const [email, setemail] = useState('')
    
   return (
 
@@ -40,12 +43,22 @@ const App = () => {
                       setUsername(e.target.value);
                     }}
           />
+          <input type="text" placeholder='enter email'
+                    value={email} 
+                    required 
+                    onChange={(e)=>{
+                      setemail(e.target.value);
+                    }}
+          />          
           <button>submit</button>
         </form>
 
         {allusers.map(function(elem,idx){
-          return <h4 key={idx} >{elem}</h4>
-
+          return <div key={idx}>
+          <h4 key={elem.idx} >
+            {elem.username}</h4>
+            <p>{elem.email}</p>
+          </div>
         })}
       </div>
     </div>
