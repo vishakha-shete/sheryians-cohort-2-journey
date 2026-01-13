@@ -44,3 +44,7 @@ var marks ={
 
 localStorage.setItem('marks',JSON.stringify (marks))
 console.log(localStorage.getItem('marks',(marks)));
+
+// ****->SESSION-STORAGE
+
+sessionStorage.setItem('user','vishakha')
