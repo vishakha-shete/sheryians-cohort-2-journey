@@ -1,0 +1,26 @@
+-today learning about local storage in 
+*)LOCAL STORAGE
+-> IN Application tab we have local storage folder
+->local storage is basically a browser storage 
+-> this is not a unified storage this not a database
+-> local storage is used to store ussers data or other things like theme and small things
+-> local storage is a browsers little space which stores a data in it
+-> Local storage is usually 5 to 10 megabite depending apon domain
+
+*) Session storage
+-> session storage works when the browser is open
+-> if browser off then session storage also offf
+
+*)Extension Storage
+-> its stores the extension which we use
+
+!)indexdb
+
+*)cookies
+
+
+1) localStorage.clear() -> is used to clear/clean local storage
+2) localStorage.setItem('key','value') -> to add new element item or overwrite existing one  
+3) localStorage.setItem('key') -> to add get any item  
+4) localStorage.removeItem('key')-> to remove any item
+5) Json.stringigfy: Array/object -> 
