@@ -23,4 +23,5 @@
 2) localStorage.setItem('key','value') -> to add new element item or overwrite existing one  
 3) localStorage.setItem('key') -> to add get any item  
 4) localStorage.removeItem('key')-> to remove any item
-5) Json.stringigfy: Array/object -> 
+5) Json.stringigfy: Array/object -> string
+6) Json.parse: Array/object -> string
