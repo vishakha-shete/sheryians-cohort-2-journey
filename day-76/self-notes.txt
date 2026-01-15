@@ -30,4 +30,14 @@
 
 ****->SESSION-STORAGE
 
+*)Fragements
+-Fragements aree unfill tabs
+<>
+<h1>Hello</h1>
+</>
+- we cannot give them id
+
+*) Props drilling in React
+
+
 

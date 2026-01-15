@@ -1,0 +1,58 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: black;
+  padding: 20PX;
+}
+
+
+.card{
+  background-color: rgb(244, 248, 247);
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.upper{
+  height: 50%;
+  width: 100%;
+}
+
+.lower{
+  height: 50%;
+  width: 100%;
+  padding: 20PX;
+
+}
+.upper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.lower h2{
+  font-size: 45px;
+  color: rgb(13, 51, 51);
+}
+
+.lower h4{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(179, 177, 175);
+}
+
+.lower h3{
+  font-size: 25px;
+  color: rgb(13, 51, 51);
+  margin-top: 30px;
+}
