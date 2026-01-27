@@ -1,0 +1,21 @@
+{
+  "name": "sheryians-cohort-2-journey",
+  "version": "1.0.0",
+  "description": "My complete learning journey through Sheryians Coding School Cohort 2 — documenting projects, notes, and progress in full-stack web development, DSA, and AI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishakha-shete/sheryians-cohort-2-journey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vishakha-shete/sheryians-cohort-2-journey/issues"
+  },
+  "homepage": "https://github.com/vishakha-shete/sheryians-cohort-2-journey#readme"
+}
