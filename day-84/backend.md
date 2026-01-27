@@ -192,3 +192,10 @@ So anyone can access it using a URL
 ✨ Today marks the start of my Backend Development journey
 From browser → server → real-world applications 💪
 
+
+//package. json tells us in which package the javascript is depend
+
+
+nodemodules -> 
+
+//package.json
