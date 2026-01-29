@@ -14,6 +14,18 @@ app.get("/home", (req, res)=>{
     res.send("loading the home page")
 })
 
+app.get("/name",(req,res)=>{
+    res.send("loading your name")
+})
+
+app.get("/sirname",(req,res)=>{
+    res.send("loading your sirname")
+})
+
+app.get("/howareyou",(req,res)=>{
+    res.send("loading the road main")
+} )
+
 app.listen(3000)
 
 // generally usable ports 2000,8000,7000,5173
