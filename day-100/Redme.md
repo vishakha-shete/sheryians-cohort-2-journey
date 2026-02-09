@@ -151,26 +151,26 @@ Open-source contributions
 - CGPA
 
 📝 Resume Formatting Tips
-Black font on white background
-Use only one clean font
-No grammatical mistakes
-No punctuation mistakes
-Keep formatting consistent
-Keep resume clean and professional
+- Black font on white background
+- Use only one clean font
+- No grammatical mistakes
+- No punctuation mistakes
+- Keep formatting consistent
+- Keep resume clean and professional
 
 🔥 Key Takeaways
-LinkedIn presence matters
-Referrals are powerful
-Skills + communication both are important
-Projects remove fresher tag
+- LinkedIn presence matters
+- Referrals are powerful
+- Skills + communication both are important
+- Projects remove fresher tag
 
 Consistency builds opportunities
 🚀 Day 101 Status
-Today was about building:
-Career strategy
-Professional positioning
-Resume strength
-Networking mindset
+* Today was about building:
+- Career strategy
+- Professional positioning
+- Resume strength
+- Networking mindset
 
-This is not just coding anymore —
+This is not just coding anymore
 This is preparing for the industry.
