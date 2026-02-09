@@ -1,4 +1,4 @@
-const express = require ("express")
+const express = require("express")
 
 const app = express()
 
@@ -8,34 +8,34 @@ const notes = []
 
 // post /notes
 
-app.post("/notes",(req,res)=>{
+app.post("/notes", (req, res) => {
     notes.push(req.body)
     res.status(201).json({
-        Message : "request sent successfully"
+        Message: "request sent successfully"
     })
 })
 
 // get /notes
 
-app.get("/notes",(req,res)=>{
+app.get("/notes", (req, res) => {
     res.status(200).json({
-        notes : notes
+        notes: notes
     })
 })
 
 // delete /notes/:index
-app.delete("/notes/:index",(req,res)=>{
-    delete notes [ req.params.index ]
+app.delete("/notes/:index", (req, res) => {
+    delete notes[req.params.index]
     res.status(204).json({
-        Message : "notes deleted successfully"
+        Message: "notes deleted successfully"
     })
 })
 
 //patch /notes/:index
-app.patch("/notes/:index",(req,res)=>{
+app.patch("/notes/:index", (req, res) => {
     notes[req.params.index].description = req.body.description
     res.status(200).json({
-        message : "description updated successfully"
+        message: "description updated successfully"
     })
 })
 
