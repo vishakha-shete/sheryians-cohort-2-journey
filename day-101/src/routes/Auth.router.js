@@ -1,15 +1,15 @@
-const express = require ('express')
+const express = require('express')
 const userModel = require('../models/userr.model')
-const crypto = require ('crypto')
-
+const crypto = require('crypto')
+const jwt = require("jsonwebtoken")
 
 const authRouter = express.Router()
 
 
 
-authRouter.post('/register',async(req,res)=>{
-    const {email,username,password,bio,profileImage} = req.body
-    
+authRouter.post('/register', async (req, res) => {
+    const { email, username, password, bio, profileImage } = req.body
+
     // const isUserExistsByEmail = await userModel.findOne[{email}]
 
     // if (isUserExistsByEmail){
@@ -28,16 +28,16 @@ authRouter.post('/register',async(req,res)=>{
 
     const isUserAlreadyExists = await userModel.findOne({
         $or: [
-            {username},
-            {email}
+            { username },
+            { email }
         ]
     })
 
-    if(isUserAlreadyExists){
+    if (isUserAlreadyExists) {
         return res.status(409).json({
-            message : "username and email allready exists" +(isUserAlreadyExists.email == 
-            email ? "Email already exists" : "Username already exists")
-            })
+            message: "username and email allready exists" + (isUserAlreadyExists.email ==
+                email ? "Email already exists" : "Username already exists")
+        })
     }
 
     const hash = crypto.createHash('sha256').update(password).digest('hex')
@@ -46,8 +46,27 @@ authRouter.post('/register',async(req,res)=>{
         email,
         bio,
         profileImage,
-        password : hash
+        password: hash
     })
+
+    const token = jwt.sign(
+        {
+            id: user._id
+        },
+        process.env.jwt_SECRET,
+        { expiresIn: "id" }
+        )
+        res.cookie("token",token)
+
+        res.status(201).json({
+            message : "user Registered successfully",
+            user:{
+                email:user.email,
+                username:user.username,
+                bio:user.bio,
+                profileImage:user.profileImage
+            }
+        })
 })
 
 module.exports = authRouter

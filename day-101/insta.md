@@ -36,3 +36,9 @@ Register
 wee have a server and database in which mongodb when one user send a request on server at the time of register it gives email and user name more also when user gives a email and username firstlly server checks it if user is allready exist with same email if user not exists then server creates a quarey in mongodb databse.the queary is email queary then database find on email basis any user exist in our database if yes then whichever the result is send to the user if not then check usename basis exists or not then again database send a result of the queary
 for checking the email or name is exist or not ur are calling the database two times then waht will happen is wee call to the database only one time or only one call checks usename and email both bases any user exists or not if we done this one time then we get resut in one time it is efficient 
 if ANYONE EXIST WITH A NAME OR EMAIL IT WILL RETURN US WE ARE CHECKING BOTH AT ONE TIME
+
+        - user data and unique user data is used to create a token
+
+why we dont send a password in respone when we register a user tell me in bullet points 
+
+on the scale of 1 to 100 how stronglly you recommend me to not send password in any form in the response
