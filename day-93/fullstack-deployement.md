@@ -171,3 +171,6 @@ app.use(cors({
 - Server must explicitly allow specific origins
 - In production, allow only trusted domains
 - explained one of the most important web security concepts 🔐
+
+
+wild card user send a request on which we not created a api 

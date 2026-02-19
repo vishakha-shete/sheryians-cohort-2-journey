@@ -19,6 +19,7 @@ html {
   padding-block: 20px;
   padding-inline: 2rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -40,4 +41,20 @@ html {
   max-width: 20 rem;
   padding-block: 1rem;
   padding-inline: 3rem;
+}
+
+.note button{
+  margin: 1rem;
+  padding-block: 5px;
+  padding-inline: 2rem;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all ease 9.s ;
+}
+
+.note button:hover{
+  scale: 0.9ms;
+  background: linear-gradient(skyblue,white);
 }
