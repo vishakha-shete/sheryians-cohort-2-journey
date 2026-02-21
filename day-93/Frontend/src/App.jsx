@@ -7,7 +7,7 @@ function App() {
   ]) //note name state variable & dummy variable
 
   function fetchNote() {
-    axios.get("http://localhost:3000/app/notes")
+    axios.get("https://sheryians-cohort-2-journey-1.onrender.com/app/notes")
       .then((res) => {
         setNotes(res.data.notes);
       })
@@ -22,7 +22,7 @@ function App() {
     const { title, description } = e.target.elements
 
     console.log(title.value, description.value)
-    axios.post("http://localhost:3000/app/notes", {
+    axios.post("https://sheryians-cohort-2-journey-1.onrender.com/app/notes", {
       title: title.value,
       description: description.value
     })
@@ -34,7 +34,7 @@ function App() {
   }
 
   function handleDeleteNote(noteId) {
-    axios.delete("http://localhost:3000/app/notes/" + noteId)
+    axios.delete("https://sheryians-cohort-2-journey-1.onrender.com/app/notes/" + noteId)
       .then(res => {
         console.log(res.data);
         fetchNote()
