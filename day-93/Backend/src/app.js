@@ -3,11 +3,13 @@
 const express = require("express")
 const noteModel = require("./models/note.model");
 const cors = require("cors")
-const path = requre("path")
+const path = require("path")
 
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use(express.static("./public"))
+//  we use this for publically showing
 
 //post
 //create new note and save data in mongodb
@@ -66,3 +68,5 @@ app.use('*name',(req,res)=>{
 })
 
 module.exports = noteModel.app
+
+module.exports = app;
