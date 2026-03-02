@@ -38,7 +38,7 @@ async function registerUser(req, res) {
         }
     )
 
-    res.cookie("token", token,)
+    res.cookie("token", token)
 
     return res.status(201).json({
         message: "user registered successfully",
@@ -52,30 +52,53 @@ async function registerUser(req, res) {
 
 }
 
-async function loginUser(req,res){
-    const {email,password,username} = req.bosy;
+async function loginUser(req, res) {
+    const {email, password, username} = req.body;
 
     const user = await userModel.findOne({
-        $or:[
-            {email},
-            {username}
+        $or: [
+            { email },
+            { username }
         ]
     })
 
-    if (!user){
+    if (!user) {
         return res.status(400).json({
-           message:"Invalid Credentials" 
+            message: "Invalid Credentials"
         })
     }
     // Q. why we are not passing here user not found passing ivalid credentials
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
-    if (!isPasswordValid){
+    if (!isPasswordValid) {
         return res.status(400).json({
-           message:"Invalid Credentials" 
+            message: "Invalid Credentials"
         })
     }
+
+    const token = jwt.sign(
+        {
+            id: user._id,
+            username: user.username
+        },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: "3d"
+        }
+    )
+
+    res.cookie("token", token)
+
+    return res.status(200).json({
+        message: "User logged in successfully",
+        user: {
+            id: user._id,
+            username: user.username,
+            email: user.email
+        }
+
+    })
 }
 
-module.exports = { registerUser , loginUser }
+module.exports = { registerUser, loginUser }
