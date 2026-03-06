@@ -9,6 +9,8 @@ router.post('/register', authController.registerUser)
 
 router.post('/login', authController.loginUser)
 
-router.get('/get-me' , authMiddleware.authUser, authController.getMe)
+router.get('/get-me', authMiddleware.authUser, authController.getMe)
+
+router.get("/logout", authController.logoutUser)
 
 module.exports = router;
