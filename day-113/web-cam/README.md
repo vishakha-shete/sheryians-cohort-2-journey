@@ -47,3 +47,12 @@ userSchema.pre("save",function (next)){
 # Task :
 userSchema.pre("save",function (next){})
 userSchema.post("save",function (next){})
+
+
+why we not use redis AS A PRIMARY DATABASE 
+==> it is costly => and uses a ram 
+==> query ni kr sakata => key value pair me store krta hai aur value string type me hoti hain
+==> we are using redis frequentlly for seeing which user login 
+
+
+MONGODB => mongo db stores a data in bson format 
