@@ -71,13 +71,13 @@ MongoDB provides good throughput, meaning it can handle many read and write oper
 
 Summary
 
-Feature            |	Redis	      | MongoDB
+Feature            |	   Redis	      | MongoDB
 _____________________________________________________
-Storage	           |     RAM	      |   Disk
-Cost	           |  Expensive       |   Cheaper
+Storage	           |     RAM	        |   Disk
+Cost	             |  Expensive       |   Cheaper
 Query Capability   |  Limited      	  |  Advanced
 Data Format	       |  Key–Value       |	BSON Documents
-Best Use Case	   | Caching, sessions|	Primary database
+Best Use Case	     | Caching, sessions|	Primary database
 
 
 Conclusion
