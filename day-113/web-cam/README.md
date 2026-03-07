@@ -56,3 +56,38 @@ why we not use redis AS A PRIMARY DATABASE
 
 
 MONGODB => mongo db stores a data in bson format 
+
+
+one server where multiple apis are present lets understand it is a instagram server suppose we can have one api like 1) /api/posts/like/:postid
+         - this api can like any post and in similiar way we are creating one more api here 
+         2)/api/posts/save/:postid
+         - this api can save this posts 
+         3)/api/posts/comment/:postid
+         4)/api/posts/story/comment/:storytid
+         understanding in server their are multiple apis are present which works on diffferent different features 
+         - one common api is coomon user is liking the post 
+         - in this post we are identifying which user is commenting this agains happens through middleware 
+         - the save api tells in which user wants to saves the post those user are requesting in their acount we need to save the post 
+
+         authUSer midlleware work is to identifying which user is requesting and which user is liking the post and then which user is saving the posts and which useer is commenting and also which user is commenting on story like this there are multiple apis available in which we have to identify which user is requesting for this all we have authuser api sot if this all api in one file then thher are multiple time token is blacklisting so we are checking this token is blacklist or not and this blacklist where we maintains in mongodb whenever we are performing the read operation in blacklist so this performance is performing in your database 
+
+         so all the request comes in server for all this request the server reads some data from database beacuse we are using common middleware this request is count in throughput and throughput has limited throughput limit is 50000 operations per second 
+
+         average request per second on the server like instagram 
+         - peak = 1 million per secong
+         - global = 2 lakh to 5 lakh per sec
+         lowest request 2 lakh per sec 
+         - still it more than database throughput 
+         1 lakh per second our database dont handle this throghput 
+
+
+         now we are using redis for blacklist we are maintaining it in redis 
+         - why we are maintaining it in redis beacuase the authuser checks in database it changes and sends a request on redis 
+         -it removes load from primary database and add it into the redis and redis has big throughput we are implementing redis now server checks the token is blacklist or not 
+
+
+
+
+
+
+
