@@ -93,6 +93,13 @@ one server where multiple apis are present lets understand it is a instagram ser
 
          we have three thigs host port and password to connect with redis 
 
+         till now we are maintaining blacklist on database now we have to maintain it on redis 
+
+         redis saves data in key value pair in js which is a object is also saves data in key value pair {
+          username: 'string'
+          email: 'test@test.com'
+         }
+
 
 
 
