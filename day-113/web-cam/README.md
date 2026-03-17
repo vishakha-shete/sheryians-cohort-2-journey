@@ -85,6 +85,14 @@ one server where multiple apis are present lets understand it is a instagram ser
          - why we are maintaining it in redis beacuase the authuser checks in database it changes and sends a request on redis 
          -it removes load from primary database and add it into the redis and redis has big throughput we are implementing redis now server checks the token is blacklist or not 
 
+        THIS IS A : Public endpoint
+        it has two parts host, port . password 
+         host = redis-15408.crce283.ap-south-1-2.ec2.cloud.redislabs.com
+         port = = 15408
+         password = pXzSn33hmu20hOCgnOZG3eBkoaW1vz8R
+
+         we have three thigs host port and password to connect with redis 
+
 
 
 
