@@ -179,3 +179,113 @@ Summary
 - MongoDB is used for data storage
 - Redis helps reduce load on the primary database
 - High traffic systems require caching layers like Redis
+
+
+This project implements a token blacklisting system using Redis to handle user authentication efficiently.
+
+Previously, blacklisted tokens were stored in the primary database.
+To improve performance and scalability, we moved this logic to Redis, an in-memory data store.
+
+🧠 Why Redis?
+
+Instead of checking blacklisted tokens in the database:
+❌ Database queries are slower
+❌ Increased load on primary database
+
+We use Redis because:
+⚡ Extremely fast (in-memory storage)
+📈 High throughput
+🔥 Reduces load on main database
+⏱ Ideal for real-time authentication checks
+
+🔄 How It Works
+User logs out → token is added to Redis blacklist
+On every request:
+Server checks token in Redis
+If token exists → ❌ request denied
+If token does not exist → ✅ request allowed
+
+
+🔐 Authentication Flow
+Client Request → Server
+              ↓
+        Check Token in Redis
+              ↓
+     ┌───────────────┐
+     │ Token Exists? │
+     └──────┬────────┘
+            │
+     YES ❌  │  NO ✅
+            ↓
+   Reject Request   Allow Request
+
+
+🗂 Redis Configuration
+We use a Redis Cloud instance.
+
+Connection Details:
+
+REDIS_HOST=
+REDIS_PORT=15408
+REDIS_PASSWORD=***************
+⚙️ Redis Client Setup
+const Redis = require("ioredis").default;
+
+const redis = new Redis({
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT,
+  password: process.env.REDIS_PASSWORD
+});
+
+redis.on("connect", () => {
+  console.log("Server connected to Redis ✅");
+});
+
+redis.on("error", (err) => {
+  console.log("Redis connection error ❌", err);
+});
+
+module.exports = redis;
+🧩 Data Structure in Redis
+Redis stores data in key-value pairs.
+
+
+Example:
+
+{
+  token: "blacklisted"
+}
+
+Or for user-like structure:
+
+{
+  username: "string",
+  email: "test@test.com"
+}
+
+
+🎯 Use Case: Token Blacklisting
+When a user logs out:
+redis.set(token, "blacklisted");
+
+When a request comes:
+
+const isBlacklisted = await redis.get(token);
+if (isBlacklisted) {
+  return res.status(401).json({ message: "Unauthorized" });
+}
+
+
+🧠 Benefits
+
+⚡ Faster authentication checks
+📉 Reduced database load
+🔄 Scalable architecture
+🧩 Clean separation of concerns
+📌 Note
+
+This Redis instance is a public endpoint requiring:
+
+Host
+Port
+Password
