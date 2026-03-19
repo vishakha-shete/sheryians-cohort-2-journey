@@ -101,8 +101,29 @@ one server where multiple apis are present lets understand it is a instagram ser
          }
 
 
+         therre are maily four layer 
+UI layes===> ui layer work is to show ui nad handling navigation threre are mainly two foler include 
+( 1) pages 2) components)
+
+hook layer===> hook layer works for managing state and api (hooks)
 
 
+state layer==> state layer work is store data those user logged in frontent that data saves in this layer(Auth.context.jsx , post.context.jsx) like this files
 
+API layer ===> api layer work is if your frontend wants to connect to the backend this communication depend on api layer 
+in services folder (auth.api.js) file
+and this file depend for communication with backend 
 
+so now we are creating this files one by one so first layer is ui layer son in auth folder we are going to create pages and components folder 
 
+in pages folder creating a login.jsx , register.jsx
+
+firstlly we are setting up react router setup with the help of this we can show on /login the login page from and /register the regitration page form so thats why we are installing react router and set up 
+
+routes related work is all in one file that is app.routes.js
+
+now we are going to implement state api layer for that we are creating services folder in that folder we are creating a file auth.api.js int this file we need a package called axios
+
+state layer work is to save user data on frontend we are creeating a state layer authcontext.jsx
+
+after this we are implementing hook layer firstlly created hook folder and in hook folser create useAuth.js file and then in components folder protected.js
