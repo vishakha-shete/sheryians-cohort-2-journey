@@ -87,14 +87,16 @@ import {
     let currentExpression = "Neutral 😐";
   
     if (smileLeft > 0.5 && smileRight > 0.5) {
-      currentExpression = "Happy 😊";
+      currentExpression = "happy";
     } 
     else if (frownLeft > 0.001 && frownRight > 0.001) {
-      currentExpression = "Sad 😢";
+      currentExpression = "sad";
     } 
     else if (jawOpen > 0.3 && browUp > 0.3) {
-      currentExpression = "Surprised 😲";
+      currentExpression = "surprised";
     }
   
     setExpression(currentExpression);
+
+    return currentExpression
   };
