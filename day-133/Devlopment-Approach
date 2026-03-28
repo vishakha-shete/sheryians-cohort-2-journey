@@ -1,0 +1,192 @@
+# 🚀 Development Best Practices & System Design Guide
+
+---
+
+# 🧹 Linting & Project Setup
+
+## Why Linting?
+- Keeps code **clean and consistent**
+- Helps avoid common mistakes
+
+## Setup
+- Configure **ESLint**
+- Add **VS Code settings**
+- Maintain a **clean folder structure**
+
+👉 Clean code = easier debugging + better collaboration
+
+---
+
+# 📊 Logging & Observability
+
+- Add logs where things can fail
+- Do NOT log everything → be strategic
+
+## Example:
+try {
+// logic
+} catch (error) {
+console.error("Error while fetching user:", error);
+}
+
+
+## Types:
+- Logs → What happened
+- Metrics → How many users / success rate
+- Traces → Where time is spent
+
+---
+
+# 🔄 Git – Your Save Game
+
+👉 Commit early, commit often
+
+---
+
+## 🌿 Branching Model
+main (protected)
+↓
+develop (testing)
+↓
+feature/* → PR → Review → Merge
+
+
+### Types:
+- **GitFlow** → main + develop branches
+- **Trunk-Based Development** → direct merge after testing
+
+---
+
+# 📥 Pull Request Etiquette
+
+Always include:
+- Short summary
+- Screenshots (if UI changes)
+- Tests added
+- Request reviewers
+
+---
+
+# ✅ Code Review Checklist
+
+- Runs locally?
+- Tests added?
+- No unnecessary console logs?
+- Proper commit message?
+- Edge cases handled?
+
+---
+
+# ⚔️ Conflict Handling
+
+- Use **rebase or merge**
+- Keep history clean and readable
+
+---
+
+# 🧪 Testing & Quality Assurance
+
+👉 Testing is not optional  
+👉 It protects your reputation
+
+---
+
+## 1. Unit Testing
+- Test a single function
+
+Example: sum(1,2) === 3
+---
+
+## 2. Integration Testing
+- Test multiple modules together
+
+Example:
+- User login + product search
+
+---
+
+## 3. End-to-End (E2E)
+- Test complete user flow
+
+Example: Login → Buy → Confirm
+
+
+---
+
+# 📊 Monitoring
+
+- Logs → What happened
+- Metrics → Performance, usage
+- Traces → Time taken in system
+
+---
+
+# ⚡ Scaling Strategies
+
+## 1. Vertical Scaling
+- Bigger machine
+- Easy but limited
+
+## 2. Horizontal Scaling
+- Multiple servers behind load balancer
+- More reliable
+
+## 3. Caching
+- Redis / CDN
+- Reduces database load
+
+## 4. Rate Limiting
+- Prevents server overload
+
+## 5. Graceful Degradation
+- System still works under heavy load (reduced features)
+
+---
+
+# ❌ Common Mistakes to Avoid
+
+## Over-Engineering
+- Too complex solutions for simple problems
+- Example:
+  > Using a helicopter to go to college 🚁
+
+---
+
+## Under-Engineering
+- No tests
+- No logging
+- Fragile system
+
+---
+
+## Ignoring Documentation
+
+👉 Always:
+- Read documentation
+- Write documentation
+
+---
+
+# 📘 Documentation Essentials
+
+- README.md
+- API contracts
+- Setup instructions
+
+👉 Goal: Onboarding = 5 minutes (not 5 days)
+
+---
+
+# 🎯 Final Takeaways
+
+- Clean code + good structure = better development
+- Testing ensures reliability
+- Git helps track progress
+- CI/CD automates deployment
+- Scaling prepares your system for real users
+
+---
+
+# 🚀 Final Thought
+
+> “Good developers write code. Great developers build systems.”
