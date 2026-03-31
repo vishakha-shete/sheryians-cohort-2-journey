@@ -27,4 +27,28 @@ export & import
 export
 
 defualt = ek hi default access kr dakta hun
-names - multiplle export kar sakta hun
+named - multiplle export kar sakta hun
+
+how to create a react js application 
+
+npm create vite
+
+npm- node package manaer
+vite - bundler
+mpm i - for installing dependensies
+npm run dev - for running server
+
+- main.jsx is parrent of application 
+- in react we right code function through
+
+rafce - is a stands for react arrow function component export 
+
+components
+- components are block of code which we use them whenever we need them 
+- peace of code 
+
+- props - props means passing data
+- data allways flow from parent to child 
+- whenever data forward from props it is in object form data always comes in key value pair 
+
+if we wantent to show data from array then we use map 

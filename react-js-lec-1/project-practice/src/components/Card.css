@@ -1,0 +1,25 @@
+
+.card{
+  margin: 20px;
+  height: 300px;
+  width: 300px;
+  background-color: rgb(83, 77, 77);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card1{
+    display: flex;
+}
+
+.image{
+  margin: 10px;
+  height:80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
