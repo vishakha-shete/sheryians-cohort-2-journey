@@ -1,12 +1,33 @@
 import React from 'react'
-import "./App.css"
+import Card from './components/card'
+
+const id = [
+  {
+    name: "Sarthak",
+    IMAGEURI: "https://randomuser.me/api/portraits/men/1.jpg",
+    about: "Frontend developer who loves React and clean UI design."
+  },
+  {
+    name: "Priya",
+    IMAGEURI: "https://randomuser.me/api/portraits/women/2.jpg",
+    about: "Passionate about UI/UX and creating beautiful interfaces."
+  },
+  {
+    name: "Aman",
+    IMAGEURI: "https://randomuser.me/api/portraits/men/3.jpg",
+    about: "Backend developer skilled in Node.js and databases."
+  },
+  {
+    name: "Neha",
+    IMAGEURI: "https://randomuser.me/api/portraits/women/4.jpg",
+    about: "Full-stack developer who enjoys building scalable apps."
+  }
+];
 
 const App = () => {
   return (
-    <div className='card'>
-      <img className='image' src="https://static.vecteezy.com/system/resources/thumbnails/035/657/675/small_2x/ai-generated-endearing-adventures-with-cute-cartoon-animal-babies-photo.jpg" alt="" />
-      <h3>vishakha shete</h3>
-      <p>Lorem ipsum dolor sit amet.</p>
+    <div>
+      <Card data={id} />
     </div>
   )
 }

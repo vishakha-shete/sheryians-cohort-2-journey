@@ -17,6 +17,11 @@ html,body{
   width: 300px;
   background-color: rgb(53, 52, 52);
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .image{
@@ -24,4 +29,14 @@ html,body{
   height:80px;
   width: 80px;
   border-radius: 50%;
+}
+
+.button{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(189, 156, 221);
+}
+
+.button:hover{
+  background-color: rgb(181, 238, 219);
 }
