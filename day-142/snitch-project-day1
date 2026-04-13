@@ -1,0 +1,67 @@
+# SNITCH
+
+1) SNITCH IS A ECOMMERCE WEBSITE
+
+- so firstlly lets understand one thing that is lots of people creating a ecommerce website then why we are creating it
+
+first thing:
+- if in everyones resume available the same ecommerce website then why they are not getting placed 
+THE REASONS:
+- scalability
+- feature implementation
+- the another reason is there are mainlly two types of people
+
+person 1 : who got placed creating a eccomerce wbsite 
+but
+person 2 : who dont get placed after creating a eccomerce website
+reason - who written a eccomerce project created in which he prforms onlly a crud operations where anyone can watch the project at to card it and manage quantity but it is only a crud 
+
+- so in this project we are creating a two different dashboards for the user after login 
+- there are mainly two types of user
+- buyyer and seller
+- if buyers login then how can we show different dashboard for seller 
+  we are doing this using a roll based authentication system it is mainly called autherization
+
+  - we are used a amazon, flipkart, blinkit types websites 
+  - all we can do this but whenwvwer we clicking on the pay now button there is a option called pay in which upi option available then generating one qr code 
+  - after scanning this qr code and adding a upi pin and the payment detected from your account then payment successfull 
+  - this is how it works and server verify a user bank acount
+
+  - we are going to understand all this are things in our project
+  - lets iamagin your a seller and you upload your project on website and your 100+ products uploade on website then how can u find out the best sell products in last week
+
+  there we need to do two thing 
+  - two mltiple schema / collection / model 
+
+  firstlly we check how many products seller have how many orders placed and then compare with previos ones so the vendar products stores in different collection how many orders placed and how many payment done so this things saved in collection 
+  - we have to collect data from multiple connection at one place and show this data to seller
+  - how this multiple data connection read 
+  - how you can manage this
+  * AGRIGATION PIPELINE
+  whenever we are implementing a new feature we need o understand this topic first 
+
+  - this is not a a simple project this is very unique project we not creating a generic ui we are going to create ui also high level in this project
+
+  - so firstlly lets understand what exactlly we are going to create 
+  - "a simple website where all types cloths are vailable in market price and procts are only  cloths are selling payment gateaway also available and a card feature"
+  - "two types user available"
+  - buyer : buyer who buys a product
+  -seller :  seller who sells a product
+
+  website is onlly around the cloth scitch next we are implementing thiks while building
+
+  - so in todays class we are implementing their are mainaly two users available buyer and seller if seller logins then seller see server dashboards on frontend if buyer logind then the buyers see the buyers dashboard on website
+
+  firstlly create a folder for snitch project
+  then run command mkdir Backend
+  then npm init -y
+  then npm i 
+  then npm i -D typescript tsx
+  then npm i express mongoose dotenv jsonwebtoken cookie-parser
+  - it all need for authentication
+  - after this installing the all types
+  then npm i @types/express @types/mongoose @types/node
+  then npx tsc --init
+  - initialized tsconfig-file
+
+  try firstlly with ts but desided to go with js so lets go with js
