@@ -22,13 +22,13 @@ reason - who written a eccomerce project created in which he prforms onlly a cru
 - if buyers login then how can we show different dashboard for seller 
   we are doing this using a roll based authentication system it is mainly called autherization
 
-  - we are used a amazon, flipkart, blinkit types websites 
-  - all we can do this but whenwvwer we clicking on the pay now button there is a option called pay in which upi option available then generating one qr code 
-  - after scanning this qr code and adding a upi pin and the payment detected from your account then payment successfull 
+  - we used a amazon, flipkart, blinkit types websites 
+  - all we can do this but whenever we clicking on the pay now button there is a option called pay in which upi option available then generating one qr code 
+  - after scanning this qr code and adding a upi pin and then payment detected from your account then payment successfull 
   - this is how it works and server verify a user bank acount
 
   - we are going to understand all this are things in our project
-  - lets iamagin your a seller and you upload your project on website and your 100+ products uploade on website then how can u find out the best sell products in last week
+  - lets iamagin your a seller and you upload your product on website and your 100+ products are uploaded on website then how can u find out the best sell products in last week
 
   there we need to do two thing 
   - two mltiple schema / collection / model 
@@ -38,19 +38,19 @@ reason - who written a eccomerce project created in which he prforms onlly a cru
   - how this multiple data connection read 
   - how you can manage this
   * AGRIGATION PIPELINE
-  whenever we are implementing a new feature we need o understand this topic first 
+  whenever we are implementing a new feature we need to understand this topic first 
 
   - this is not a a simple project this is very unique project we not creating a generic ui we are going to create ui also high level in this project
 
   - so firstlly lets understand what exactlly we are going to create 
-  - "a simple website where all types cloths are vailable in market price and procts are only  cloths are selling payment gateaway also available and a card feature"
+  - "a simple website where all types cloths are vailable in market price and products are only cloths, cloths are selling payment gateaway also available and a card feature"
   - "two types user available"
   - buyer : buyer who buys a product
   -seller :  seller who sells a product
 
   website is onlly around the cloth scitch next we are implementing thiks while building
 
-  - so in todays class we are implementing their are mainaly two users available buyer and seller if seller logins then seller see server dashboards on frontend if buyer logind then the buyers see the buyers dashboard on website
+  - so in todays class we are implementing their are mainaly two users available buyer and seller if seller logins then seller see server dashboards on frontend if buyer login then the buyers see the buyers dashboard on website
 
   firstlly create a folder for snitch project
   then run command mkdir Backend
@@ -64,4 +64,15 @@ reason - who written a eccomerce project created in which he prforms onlly a cru
   then npx tsc --init
   - initialized tsconfig-file
 
-  try firstlly with ts but desided to go with js so lets go with js
+  try firstlly with ts but desided to go with js so lets go with js because this is a very complex project so it is better to go with the js
+
+  we are creating config.js where we are using pur .env package
+  - you think like your credentials are only in dotenv file but not there are also different seperated files are available for managing the credential 
+  - for ex : the google sercer firebase files created differentlly then in that we have long long files with keys so there key is in different folder 
+  - aws keys are different keys the access procedure is also different 
+  - thats why secrete is not onlly store in dotenv file secrete comes in different different files
+
+  AWS: in aws there is one thing called asm
+  - asm is stands for aws secrete manager 
+  - in which u are storing all ur secrete and when ur server starts then we call it and use it in this .env file not exist but yahh  kind of we can use but only in .env files secretes are not stored we can aacces it from different different files so for that we collect it into one file callled config.js 
+  - and with the help of config.js file we can use it all over sharing a secrete from config.js file 
