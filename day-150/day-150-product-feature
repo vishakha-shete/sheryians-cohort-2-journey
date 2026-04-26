@@ -1,0 +1,203 @@
+# 🛍️ SNITCH E-Commerce – Product Variants System
+
+## 🚀 Overview
+
+This feature introduces a **dynamic product variant system** for the SNITCH E-Commerce platform. It allows sellers to create multiple variants of a product and enables buyers to interactively select variants on the product detail page.
+
+---
+
+## ✨ Features
+
+### 🧑‍💼 Seller Side
+
+* Create product variants
+* Manage stock per variant
+* Add variant-specific images
+* Define attributes (color, size, etc.)
+* Set custom pricing for variants
+
+### 🧑‍💻 Buyer Side
+
+* Select product variants dynamically
+* View updated images, price, and stock
+* Smooth UI interaction (real-time updates)
+* Automatic fallback to default product values
+
+---
+
+## 🧠 Core Concept
+
+Each product can have **multiple variants**, and each variant can override:
+
+* Images
+* Price
+* Stock
+* Attributes
+
+If a variant does NOT contain a field →
+👉 fallback to main product value
+
+---
+
+## 🔁 Fallback Logic
+
+```js
+const displayImages = variant.images?.length
+  ? variant.images
+  : product.images;
+
+const displayPrice = variant.price || product.price;
+```
+
+---
+
+## 📦 Product Structure
+
+```json
+{
+  "title": "t-shirt",
+  "description": "high quality branded t-shirt",
+  "price": { "amount": 1000, "currency": "INR" },
+  "images": [...],
+  "variants": [...]
+}
+```
+
+---
+
+## 🧩 Variant Structure
+
+```json
+{
+  "images": [...],
+  "stoks": 29,
+  "attributes": {
+    "color": "red"
+  },
+  "price": {
+    "amount": 34,
+    "currency": "INR"
+  }
+}
+```
+
+---
+
+## 🎛 Variant Selection Logic
+
+1. Extract all attributes dynamically from variants
+2. Store selected attributes in state
+3. Find matching variant
+4. Update UI accordingly
+
+---
+
+## ⚙️ State Management
+
+```js
+const [selectedAttributes, setSelectedAttributes] = useState({});
+const [selectedVariant, setSelectedVariant] = useState(null);
+```
+
+---
+
+## 🔍 Variant Matching
+
+```js
+const matchedVariant = product.variants.find(variant =>
+  Object.entries(selectedAttributes).every(
+    ([key, value]) => variant.attributes[key] === value
+  )
+);
+```
+
+---
+
+## 🎨 UI Behavior
+
+* Attribute buttons (color, size, etc.)
+* Active selection highlighting
+* Dynamic image switching
+* Dynamic price update
+* Stock availability display
+
+---
+
+## 🖼️ UI Example
+
+* Select Color → UI updates instantly
+* Images change based on variant
+* Price reflects variant pricing
+* Stock updates accordingly
+
+---
+
+## 📱 Responsive Design
+
+* Mobile-friendly layout
+* Attributes wrap properly
+* Image gallery adapts
+
+---
+
+## ⚡ Tech Stack
+
+* React.js
+* TailwindCSS
+* Redux Toolkit
+* Node.js (Backend)
+* MongoDB
+* ImageKit (Image Storage)
+
+---
+
+## 📁 Folder Structure
+
+```text
+features/
+ ├── products/
+ │   ├── pages/
+ │   ├── components/
+ │   ├── hooks/
+ │   ├── services/
+```
+
+---
+
+## 🧪 Edge Cases Handled
+
+* Missing variant images → fallback
+* Missing variant price → fallback
+* No variant selected → default product
+* Multiple attributes support
+
+---
+
+## 🎯 Outcome
+
+This feature enables a **real-world e-commerce experience** similar to:
+
+* Amazon
+* Zara
+* Nike
+
+Users can seamlessly explore product options without page reloads.
+
+---
+
+## 📌 Future Improvements
+
+* Size + Color combination selection
+* Disable unavailable variants
+* Add-to-cart per variant
+* Variant-based URL sharing
+
+---
+
+## 🏁 Conclusion
+
+The variant system enhances flexibility, scalability, and user experience, making the platform closer to a **production-level e-commerce application**.
+
+---
+
+💡 Built with a focus on real-world product behavior and clean UI/UX.
