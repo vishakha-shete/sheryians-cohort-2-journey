@@ -1,0 +1,21 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    background-color: rgb(188, 228, 228);
+}
+
+button{
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+}
