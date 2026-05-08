@@ -31,4 +31,24 @@ shree - make changes in button and change the color of button to red and push th
 - then again both make git pull and the code is available
 - and next time shree making some changes on same thing and push it to the github 
 - and same time vishu also making some changes on same code and make commit
-and same time before pulling if i try to amke a commit then github gives a error failes to push because in github there are some changes which not availabel in your system are present then 
+and same time before pulling if i try to make a commit then github gives a error failes to push because in github there are some changes which not availabel in your system are present then 
+- if now vishu run a command called git pull origin main then it ask for merge or rebase then now we are using merge here 
+- and them i run same command git pull origin main then we show again a error the changes made by shree and vishu is conflicting with each other it gives a auto-merging it shows a waht confict it 
+- then accept which is you want to acccept 
+- inocomming changes
+- current changes 
+then make commit then again joining this two we have to commit again and again this commit send to the github it contains all commits then i push commit to github 
+- till now we are staying with both changes but we can also do any one chnnge stay in github if we want that 
+- then ommiee making somw changes in code next and pshesh it into github 
+- and vishu also making some changes now vishu dont know about what omiee push into github now vishu make commit not push into github if vishu try to push on github but it sends an error because omiee code dont pull by vishu  then vishu run pull and try to push it on github but it sends error because omiee also worked on same file so github dont able to take design which code is want to store then u need to fix which changes u want and push into in github and whenever we are merging the commit we have to commit firstlly 
+- now we are seeing how in branch seen goes so shree created a new branch called style-features and in thar branch shree make some changes these changes is different and this whole branch feature goes in github 
+- vishu firstlly pulling the style feature branch 
+- git branch
+- git branch style_features
+- git checkout style_features 
+- git pull origin style_features  
+
+comes a changes with some conflicts beacuse shree and vishu have different changes 
+- shree and vishu changes are breaking but i have to tell it that which changes i want so for that 
+- i have to merge all so vishu needs to run git checkout main
+- git pull origin stylesfeature branch then commiting and pushing code into github 
