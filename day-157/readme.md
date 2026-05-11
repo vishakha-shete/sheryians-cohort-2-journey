@@ -31,12 +31,70 @@ docker has mainlly two concepts
 - container 
 - images and container are the main two concepts of the docker 
 
-# its day 157 we are learning about docker compose and aws concept
-- in todays class we try to understand the concept of aws how networking impliment what are the main eliments and concept in it 
-- how we can perform development with docker compose 
+images - images is combination of codebase,dependencies,node,os all this are four things are files its include in image 
 
-# local-development
-- whenever we do things locally on our system 
-- there are two things 
-1) frontend which runs through vite
-2) backend
+what is the role of operating system 
+- user interface 
+- os work is to manage hardware ssd hard disk
+- user task performes through this 
+-os os build for using hardwares and others you are watching ui it is for best user experience 
+- image we creating their size is only 4 to 5 mb that is enough for running the server without ui and other things 
+- in node also same thing it is related to gui if i remove dependencies then node js also stay little 
+- so after this your image file size is around 120-200mb 
+
+image - image is compilation of codebase(controllers),dependencies(express,mpngoose,dotenv), node, os in one file that file is calles image
+
+CONTAINER 
+- image is only file 
+- when you run/execute the image it convert in the form of container 
+- a container is a running intense of image
+
+- for example we are creatig one express server and convert it into image form then we execute the image then it makes as a conatainer 
+
+- if u want to use docker then u have to install docker desktop for this 
+
+
+PHASE-1
+- we have to convert express server into image 
+- now i created a server and have all four requires 
+- i have to convert it into one image 
+- and now i have create dockerfile in my folder 
+- deleted node_modules files
+- in docker file we write
+- FROM node:20-alpine it is image
+- its the combination of node version:20 + Linux os 
+- COPY . /package.json .
+COPY . /package-lock.json .
+
+RUN npm install
+
+TWO THINGS ARE DONE NODE AND OS 
+
+- then we again need codebase and dependencies 
+COPY . /server.js .
+
+this four things are in the image now 
+docker file tells onlly how to create a image 
+- now run command called docker build. -t cohort_2 this command create an image 
+- it finds your docker file and create image 
+- AND IN THIS IMAGE HAVE CODEBASE, DEPENDENCIES,NODE,OS NAME OF THIS IMAGE IS COHORT_2 HERE OUR PHASE ONE COMPLETED 
+
+
+PHASE-2
+- we convert image into container form  
+- FOR EXECUTING THE COMMAND WE HAVE ONE another command called docker run cohort_2
+- for starting the server 
+we write in docker file CMD ["node", "server.js"]
+- now container start its an running instance of image
+
+but the problem is your server is running into container you cannot access it out of the container 
+- for accessing the server 
+- we have to run command called
+- docker run -p 8080:3000 cohort_2 
+- here we are mapping the port 
+
+lets understand how compose
+if you created a api called login and covert it into image and execute it 
+- and again create a register api and then you thing its converted into image but not image cant be update we can completelly rewrite it but dont update
+- image is immutable  
+- if u want to convert it actually in image then u have create it again 
