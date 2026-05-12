@@ -86,3 +86,6 @@ user pods
 - we are deploying our sandbox service on kuber cluster 
 - the kubernatives cluster missing one thing called 
 - for installing ingress controller after installing this we can apply a rules 
+
+- the sandbox server is spins but dont write how the pod is connected to the sandbox 
+- we created a ingress called codespace-ingress 
