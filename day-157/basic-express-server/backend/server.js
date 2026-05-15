@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-    res.status(200).json({message: "Hello, World!"});
+    res.status(200).json({ message: "Hello, World!" });
 });
 
 app.get('/api/data', (req, res) => {
@@ -16,6 +16,14 @@ app.get('/api/data', (req, res) => {
     res.status(200).json(data);
 });
 
+
+app.get('/api/health', (req, res) => {
+    res.status(200).json({
+        status: "OK"
+    });
+    res.status(200).json(data);
+});
+
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
