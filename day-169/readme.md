@@ -1,0 +1,18 @@
+# day-169 yesterday i tell you the archetecture some changes makes in that archetecture
+- lets see that archetecture i just make little bit changes on it 
+- in yesterdays archetectur we have ai pods 
+- the sandox service is creating a pods forward and need to create service and ingress 
+- we are changing the archetecture this time we are not creating a ingress each time 
+- and each time we are creating one pod and one service 
+- in pod we are running vite develpmet server and another one creating a service 
+- if ingress is not creating then how traffic reache out to the service 
+- if user stays out of the ungress then user cannot sends a directlly a request 
+- user sends a request on ingress then goes to the auth service
+- so without ingress how user sends request on pods 
+- this time we are creating a *preview.localhost this time ingess dosent forward a request to a service 
+- all request goes to the ingress which ends *preview.loalhost
+- those request to this ingress and this ingress sends a request on one server name is router server 
+- so ingress send a request on router server 
+- router server sends it forward
+- router servver is our express server  
+- because this is router server it has one service also router-service
