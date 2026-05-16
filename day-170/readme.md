@@ -1,0 +1,1 @@
+senbox service cretes one pod and gives a preview url and acces the content 
