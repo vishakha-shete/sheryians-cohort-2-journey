@@ -56,3 +56,7 @@ services:
 volumes:
   Backend_node_modules:
   Frontend_node_modules:
+
+  - docker compose up --build
+
+  
