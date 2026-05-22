@@ -33,4 +33,44 @@ cloud -wtach
 - it produced runtime logs for maintaining that it 
 
 = LETS LEARN ECR AND ECS
-- 
+- we are running a command called npm run build it creates a dist folder then we have to move it to the backend then frontend and backemd in one folder
+but it takes a lot time and we cannot do it every time and we need automation
+
+we are automating it using a docker-file
+we are creating a dockerfile and dockerignore file in main folder 
+FROM node:20-alpine as frontend_builder
+
+WORKDIR /app
+
+COPY ./frontend/package.json /app
+
+RUN npm install
+
+COPY ./frontend /app
+
+RUN npm run build
+
+whenever your seeing a from keyword from theire new stage start creating 
+
+NOW CREATING A STAGE-2
+# stage-2 : fullstack-image
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY ./backend/package*.json /app
+
+RUN npm install
+
+COPY ./backend /app
+
+COPY --from=frontend_builder /app/dist /app/public
+
+CMD ["node", "server.js"]
+
+
+docker build . -t fullstack:latest
+docker run -p 3000:3000 fullstack:latest
+
+
+life stuck feels in every ones lif so this phase comes in everyones lifes so thats why dont be so nervous judt do working everyday
