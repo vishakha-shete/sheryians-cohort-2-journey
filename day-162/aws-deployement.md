@@ -1,4 +1,4 @@
-# ☁️ AWS Networking, ECS, ECR & Fullstack Docker Deployment
+# ☁️day-162 - AWS Networking, ECS, ECR & Fullstack Docker Deployment
 
 ## 📌 Overview
 
