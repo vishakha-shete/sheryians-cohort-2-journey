@@ -181,3 +181,5 @@ kubectl top nodes
 kubectl top pods
 
 watch cli install
+- we have to set up the watch-cli fot this windows 
+- and then use it 
