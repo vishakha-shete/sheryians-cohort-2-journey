@@ -182,4 +182,58 @@ kubectl top pods
 
 watch cli install
 - we have to set up the watch-cli fot this windows 
+- watch is cli tool
 - and then use it 
+
+after installing the watch cli you have to run the command called 
+# - watch -n 2 kubectl top pods
+-this commands meand again and again running this command 
+- it runs this command after each two seconds the monitoring refreshing after each two seconds 
+
+- we have one another cli tool called hey cli 
+- this tool sends a number of traffic on any server 
+
+we have to run the command on hey cli called
+
+# - hey -z 2n -c 200 http://localhost
+- for two minutes u have to press hey in which concurentlly you send 200 request and the traffic goes on our http://localhost where our server id running
+
+- for seeing the traffic running on the port i run the command called 
+# kubectl logs deployment/express-deploymeent --tail=100 -f
+- it gives a live logs 
+
+- then go to hey run the command and see livelly how traffic id going 
+- the traffic is going is verry heavy 
+- the pods cpu usage is increases now 
+
+- now we are learning how to scale it we are just running one command here and kubectl will autoscale it 
+- but now it is not autoscaalling 
+- kuberneties can autoscale but by default its not autoscalling it is autoscalling with the help of hpa 
+
+now we have to run command called
+- kubectl autoscale deployment express-deployment \
+  --min=2 \
+  --max=10 \
+  --cpu-percent=50
+  
+  - the minimum node it has uts 2 but the maximum one 10 
+  - minimum u can go to the two pods but when load is comming u can go to the maximum 10 pods and in maximum u go only when the cpu  percentage is high 
+
+  - we run this command and add the pods using this command
+  - we are using all this in our next project 
+
+
+  - till now we have ingress controller service and matrics server and one another thing exist called hpa its long form is horizontal pod scalling 
+  - it autoscale the pods 
+  - metric-server - hpa wants a data from metric server for recognized the load on the website and then if hpa things the load increases so then its autoscale it 
+  - we can do another things also kuberneties supports for multiple service 
+  - in backend we are creating a folder called main-server
+  - in which we are creating a server and create a docker image
+  - and creaate a deployement_product.yml 
+  - kubectl apply -f deployement-product.yml run this command 
+  - we created a one another deployement name called product_deployement 
+  - port is 8080 
+  - container name is product
+  - now we need to create a service 
+  - we have another service name called service-product
+  - but the problem is our ingress controller is it dosent send a traffic to second service because we cannot created any role which sends a traffic to the second service so we have to fistlly create it into the ingress.yml file
