@@ -1,229 +1,44 @@
-🚀 AI Sandbox Microservice Architecture
-📌 Overview
+# day-166 today going to learn about 
+- the capstome project in which we have to learn the multi agent orchestration 
+- means here multiple agents are present and all work together for providing a one outpu
+- what we are building using multi-agent orchestration
+- kind of lovable and like versel v0 like this we are creating where user using ai create a ui interface cahnge the design create all files create creact
+- here is one mvp we have multi agent system for creating a ui aong with this with the help of kuberneties we are building a sandbox 
+- sandbox - its kind of a small vertual machine in which only your project is running and on aws it creates a machine and there working your computation and all 
+- and shows your project preview on browser so we have to create this 
+- two more mvp involve
+- first one is multi agent orchestration and second is in which your creating a sandbox it is not easy it is little bit hard 
+- user able to gives input and the multi agent creates a new files for user and updating the existing files in your project it gives u a full ui and preview on users browser 
+- and the development server runs on sandbox 
+- this is our capstome project i cant name it but yess this is idea 
+- we are using multiple microservies in it 
+- we use microservice when theire is big scale like 20lakh to 30lakh users are theire that time we are using microservices generally not because for handlling microservices we need a 6  to 7 teams and the number of microservices present that number we need a teams also so now single developer 
+- we can using 3 microservices because we are creating a project by single user 
 
-This project is part of the final phase of the cohort where the focus shifts from:
+3 mvp present
+- microservices
+- multi agent orchistration
+- sandbox environment
 
-Watching project tutorials ❌
-To understanding real-world developer workflows ✅
+- local agent - if have done onlyy
 
-The main objective of this project is to learn:
+learn = 
+skaffold - skaffold is an open-source command line tool from google that automate the workflow for building , pushing, and deploying applications to kubernetes 
 
-Reading documentation
-Understanding existing codebases
-Setting up large projects independently
-Working with Docker containers
-Understanding microservice architecture
-Managing development environments
-🧠 Why This Project?
+this tool used in industry debugging plays a crusial role in this 
 
-In real companies:
+skaffold - how we can use kuberneties in development how to set up it we can this things make easy using skaffold you havw debug things by own 
+- how you can setup skaffold with it
 
-Nobody explains every line of code
-Developers receive:
-documentation
-README files
-existing codebases
-setup instructions
+student ishue 
+- the student cannot create project by theire own they only watch tutorials and make it they unable to add new feature in project 
+- only creating a tutorials project not adding any extra features in the project 
+- you have to start with each day with new folder and new practise only watching and doing things then u are not going to stay into this it industry
+- whenever your doing this thing again and again you are able to understand what exactlly is our project and ishue in it then and then ur are able to understand real industry stuffs 
+- if u create the project reapeateadlly then u dont phase this ishue 
+- if u are phasing this ishue u have to work on you
+- those who builds a project again and again those not faced this ishue 
+- 
 
-A developer’s work is not just writing code.
 
-A developer also:
-
-reads documentation
-understands architecture
-debugs systems
-sets up environments
-follows project requirements
-
-This project is designed to teach those real industry skills.
-
-🎯 Project Goal
-
-Build a Sandbox Microservice System that allows AI-generated React applications to run inside isolated containers.
-
-The AI can:
-
-generate React code
-update React code
-preview applications live
-🏗️ Architecture Overview
-
-The system uses:
-
-Docker
-Kubernetes
-Multiple Containers
-Shared Workspace
-Real-time Communication
-📦 Kubernetes Architecture
-
-A single Kubernetes Pod contains:
-
-Pod
- ├── Vite Container
- ├── Communication Agent Container
- └── Sync Agent Container
-
-All containers share access to a common folder called:
-
-workspace/
-
-This folder contains the React project files.
-
-⚡ Vite Container
-Purpose
-
-Runs the React frontend using Vite.
-
-Port
-5173
-Responsibilities
-Starts Vite development server
-Serves React application
-Generates preview URL
-Displays frontend in browser
-🔌 Communication Agent Container
-Port
-3000
-Purpose
-
-Handles communication with the workspace.
-
-Features
-Workspace Sync
-
-Uses Docker Bind Mounts:
-
-Host Machine ↔ Workspace Folder ↔ Containers
-
-All containers can access the same files.
-
-WebSocket Communication
-
-Provides:
-
-WebSocket URL
-Socket.IO connection
-
-This enables:
-
-Bidirectional communication
-Real-time updates
-Running commands remotely
-node-pty Integration
-
-Uses:
-
-node-pty
-
-to:
-
-execute terminal commands
-simulate shell environments
-modify React code dynamically
-☁️ Sync Agent Container
-Purpose
-
-Synchronizes project files with AWS S3.
-
-Features
-
-Monitors the workspace/ folder.
-
-Whenever:
-
-file created
-file updated
-file deleted
-file modified
-
-The changes are automatically synced to:
-
-AWS S3 Bucket
-Important Note
-
-The Sync Agent:
-
-does NOT expose ports
-cannot be accessed externally
-works internally only
-🧩 Main Workflow
-AI generates React code
-        ↓
-Code stored in workspace folder
-        ↓
-Vite container runs frontend
-        ↓
-Communication agent updates files
-        ↓
-Sync agent uploads changes to S3
-📂 Project Structure
-backend/
- ├── src/
- ├── Dockerfile
- ├── docker-compose.yml
- ├── server.js
-
-frontend/
- ├── src/
- ├── vite.config.js
-🐳 Technologies Used
-Backend
-Node.js
-Express.js
-Socket.IO
-node-pty
-Frontend
-React.js
-Vite
-DevOps
-Docker
-Docker Compose
-Kubernetes
-Cloud
-AWS S3
-📖 Learning Objectives
-
-This project teaches:
-
-Reading documentation
-Understanding architecture
-Setting up existing projects
-Docker fundamentals
-Kubernetes basics
-Real-time communication
-Container orchestration
-Shared workspace systems
-⚠️ Important Industry Lesson
-
-Real-world development is not only about coding.
-
-Developers must also:
-
-understand documentation
-analyze existing systems
-configure environments
-debug independently
-
-This project simulates real company workflows.
-
-🚀 Future Scope
-
-As the project grows, more features can be added:
-
-AI code generation
-Container orchestration
-Multi-user support
-Live collaboration
-Sandboxed execution
-Cloud deployments
-🏁 Conclusion
-
-This project is a practical introduction to:
-
-modern backend systems
-microservices
-containerized development environments
-real-world developer workflows
-
-It focuses on building industry-level problem-solving and setup skills rather than only writing code.
+TASK = learn about skaffold and implement it 
