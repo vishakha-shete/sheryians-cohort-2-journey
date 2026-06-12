@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5e4a4a;
+}
+
+.box , .box1 , .box2 , .box3{
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(3, 3, 3);
+  font-weight: 900;
+}
+
+.box{
+  background-color: rgb(235, 235, 167);
+}
+
+.box1 {
+  background-color: rgb(235, 167, 167);
+}
+
+.box2 {
+  background-color: rgb(167, 235, 167);
+}
+
+.box3 {
+  background-color: rgb(167, 167, 235);
+}
