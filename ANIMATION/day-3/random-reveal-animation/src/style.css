@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-counter h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+/* Main Container */
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* Background Image */
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.overlaytext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.subheading h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
