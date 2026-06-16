@@ -1,27 +1,49 @@
-*{
+* {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
 
-body{
+body {
   height: 100vh;
   width: 100vw;
   background-color: rgb(1, 7, 5);
+  color: white;
+
 }
 
-.box1,.box2{
-  margin:20px;
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  margin: 20px;
   height: 50px;
   width: 100px;
 }
 
-.box1{
+.box1 {
   background-color: rgb(55, 169, 197);
 }
 
-.box2{
+.box2 {
   background-color: blueviolet;
 }
 
+.box3 {
+  background-color: aqua;
+}
+
+.box4 {
+  background-color: rgb(255, 0, 0);
+}
+
+.box5 {
+  background-color: rgb(255, 255, 0);
+}
+
+.box6 {
+  background-color: rgb(0, 255, 0);
+}
