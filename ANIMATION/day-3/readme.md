@@ -1,4 +1,4 @@
-# till now what we learn 
+#day-3 till now what we learn 
 
 1) animation
 2) web animation
@@ -62,4 +62,42 @@ then we build the small project using the stragger
 
 lets move towards the understanding of the timeline 
 - timeline is used for the sequence of the multiple  animation
-- 
+- we can add different animation also 
+- we take a different element box1,box2,box3.box4 
+- my goal is after ending the box animation that time runs a next box1 animation 
+- so now what we can do 
+- we can add delay which animation 1 requires to complete
+- but with this one problem accures 
+- whenever ur doing a complex animation that time your not doing this things 
+- so u dont need to calculate this animation 
+- for that we use timeline 
+- so lets use the timeline 
+- so how we can create a timeline
+- const tl = gsap.timeline();
+after adding this you can understand the changing of animation is runs
+but generally dont want thiss
+
+# position parameter
+- now lets move towards the position parameter 
+- what is position parameter
+- tl.to(element,{property},parameter);
+- there are multiple types of position parameters
+- types of position parameter
+1) "<" = less that parameter 
+- how exactlly it works
+= you have three animation a1,a2,a if i add a position parameter to the a2 so each element has its own starting and ending point 
+- so after adding this both box runs on same time because it makes the same box time as a previous one 
+
+if add like "<0.1" its add a delay type in the animation 
+- its run adding A delay in it its add a delay in the starting time 
+
+2) -=0.3
+- this animation runs before ending first animation it -0.3 from the previous animation 
+if i add +=0.3 it also work as delay and then run the animation of second box 
+
+3) LABELS
+- till now we are playing downword upword
+- till now compares with upword element
+- if i want to make animation 4 and 2
+- then that time i used labels
+- we can move the different animation using a same label name 
