@@ -5,11 +5,32 @@
 }
 
 body{
+  padding: 10px;
   height: 100%;
   width: 100%;
   background-color: aquamarine;
 }
 
+.box, .box1, .box2, .box3{
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.box1{
+  background-color: blue;
+}
+.box{
+  background: black;
+}
+.box2{
+  background-color: blueviolet;
+}
+.box3{
+  background-color: brown;
+}
+
 button{
-  font-size: 1rem;
+  margin: 10px;
+  font-size: 2rem;
 }
