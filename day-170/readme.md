@@ -223,3 +223,7 @@ export default app;
 - there is one thing mising bydefault if new cluster is creating 
 - so ingress controller is not installed
 - so we need to install it 
+-
+
+http://localhost/api/sandbox/health
+
