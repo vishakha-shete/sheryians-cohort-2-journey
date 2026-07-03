@@ -227,3 +227,82 @@ export default app;
 
 http://localhost/api/sandbox/health
 
+- what we want is like the sandbox service can create a pod and also create one service so bydefault this all things are working into the kuber-cluster kuber cluster by-default any pod 
+- what is a sandbox service it is one pod 
+-  so then kuberneties bydefault any service is not allowed for creating a self new pod and self service kuberneties doesent give any permission 
+- so this is we want to create so for this here nee to create a file 
+- file name is rabback
+- now we are checking our apis working or not simply goes in browser and check first api
+http://localhost/api/sandbox/health
+
+and then i check this on postman it gives an error 
+http://localhost/api/sandbox/start
+
+- if u want to see what exactlly the errors comes into the sandbox-service 
+- so u can run the command called 
+- kubectl logs deployment/sandbox-deployment -f
+
+and now we are deleting the pods
+- kubectl delete -f ./k8s
+- with the help of this i deleted deployement pods and evrything which present kuberneties 
+- now our first work is to give a permission to the sandbox service to creating a new pods and sevices and 
+- for this we have to create one another file in k8s folder that is rbac.yml
+- this is the file in which we are creating a serviceaccounts 
+- we can name it as resource-manager
+- then we are creating a role metadata
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name:  resource-manager
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: resource-manager
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "services"]
+    verbs: ["get", "list", "watch", "create", "update", "delete"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: resource-manager-binding
+subjects:
+  - kind: ServiceAccount
+    name: resource-manager
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: resource-manager
+
+  now lets understand the meaning of this file
+  - here we are creating a one service account 
+  - so lets understand the meaning of service account into the kuberneties 
+  - in the company the has cto title (cheaf technical officer)
+  - so he can take a design related to technical 
+  - it is like a that cto tittle 
+  - it is a job-description or account 
+  - it a one service acount which name is the resource manager 
+  - so u just created a account
+  - now u dont gave your acount to anyone
+  - whoever had this role or accesed of the resource manager they can create a pods and delete the pods watch ,list, get
+  - they can perform any tak with the pods and services
+  - so now we can give our ressoure manager accessed to the sandbox-deployement
+  - spec we are adding serviceaccountname
+  - and then we have a service account name called resource-manager
+  - then what will happens the service account present can  the pods which are creating in sandbox services all has a permission for creating a pods and services so now we gives a permission for this 
+  -it like instagram without creating and account we cannot likes see anything in instram there u follow the instagram security so here also same 
+  - then we run the command kubectl apply -f ./k8s
+  - then created a pods and service
+  - this time sandbox-service created a pod and service 
+  - still i can verify that in pod everything works perfectlly or not 
+  - for veryfying i came out with the pods 
+  - this can created a pod and service
+  - but like we want a ingress in which preview.locahost is allows and 
+   there is router server and service is remaining to learn
+   - fistlly we are going to create a router servers 
