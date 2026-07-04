@@ -306,3 +306,244 @@ roleRef:
   - but like we want a ingress in which preview.locahost is allows and 
    there is router server and service is remaining to learn
    - fistlly we are going to create a router servers 
+   - in sandbobox we are creating a folder called router
+   - this router works for router service 
+   - in creating a server fo that running a command called 
+   - npm init -y
+   - theninstalling some packages 
+   - npm i express morgan http-proxy-middleware 
+   - http proxy is for kind of reverce proxy 
+   - http-proxy-middleware  with using this package what we can do??
+   - the requests comes from router server we can forward it into the next perticular service 
+   - in router we are creating a folder called src in which app.js
+import {createProxyMiddleware} from "http-proxy-middleware";
+   -  this middleware helps u to forwards a request  
+   - how??
+   = those request which comes those request in which domain comes 
+   - pod2.preview.localhost
+   - pod1.preview.localhost
+   - i want extract this pod1 because this is my id 
+   - so i want to extract this id 
+   - for extracting this 
+   - i dont want full i want only starting-part .preview.localhost is static
+   - i can add const sandboxId = host.split('.')(0);
+   - i can slpit it on the bases of .
+   - and remove the first part 
+   - now we get a sandboxid and now we have to create the target
+   - const target = `http://sandbox-service-${sandboxID}`
+   - the target is our pod1 service
+   - the prefix of this is sandbox-service-then here sandbox id 
+   - after this we are returning the proxymiddleware in proxymiddleware we have target , chnageorigin:true,then we also have websocket ws:true, then we are calling t with parameter
+   req,res,next
+   - like this server is setuping 
+   - done with the server setup
+   - router server is done now
+   - import express from "express";
+import morgan from "morgan";
+import { createProxyMiddleware } from "http-proxy-middleware";
+
+const app = express();
+
+app.use(morgan("combined")); 
+
+app.use((req, res, next) => {
+    const host = req.headers.host;
+
+    const sandboxId = host.split('.')[0]; // Extract the sandbox ID from the subdomain
+
+    const target = `http://sandbox-service-${sandboxId}`; // Construct the target URL based on the sandbox ID
+
+    return createProxyMiddleware({
+        target,
+        changeOrigin: true,
+        ws: true, // Enable WebSocket proxying
+    })(req, res, next);
+});
+
+export default app
+
+we have to create a file in router folder called dockerignore file in which we have to add nodemodules and .env 
+- we have to set up it each time whenever we are creating a server
+- and also have to create a file called dockerfile 
+- then we have a base image in it is
+- FROM node:20-alpine 
+and the wordirectory is a app
+WORKDIR /app
+then copy and npm install
+COPY package.json ./
+RUN npm install
+then coppy all
+COPY ..
+
+EXPOSE PORT NUMBER 3000
+then we are giving a command  node server.js
+
+EXPOSE 3000
+CMD ["node", "server.js"]
+
+then we have to install the package in development time
+
+npm i -D nodeman
+   
+then i have to add this    
+CMD ["npm", "run", "server"]
+
+for this i need to add dependencies in the package.json called
+- "dev": "nodemon -L server.js"
+
+so here is done with the router now i have to create image 
+- for this we have to run the image 
+- docker build -t router:latest .
+- now our image is created 
+- but with images not working we have to create a deployement and service file 
+- we are now creating a file in k8s folder called router-deployement.yml
+- we are going into it with deployement complete 
+- apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: router-deployment
+  labels:
+    app: router
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: router
+
+  template:
+    metadata:
+      labels:
+        app: router
+
+    spec:
+      containers:
+        - name: router-server
+          image: router:latest
+          imagePullPolicy: Never
+
+          ports:
+            - containerPort: 3000
+
+          resources:
+            requests:
+              cpu: "20m"
+              memory: "250Mi"
+            limits:
+              cpu: "500m"
+              memory: "500Mi"
+
+          livenessProbe:
+            httpGet:
+              path: /api/status/healthz
+              port: 3000
+            initialDelaySeconds: 90
+            timeoutSeconds: 10
+
+          readinessProbe:
+            httpGet:
+              path: /api/status/readyz
+              port: 3000
+            initialDelaySeconds: 30
+            timeoutSeconds: 10
+
+after this we have to create two apis for it 
+- app.get("/api/status/healthz", (req, res) => {
+    res.status(200).json({ status: "ok" });
+});
+
+app.get("/api/status/readyz", (req, res) => {
+    res.status(200).json({ status: "ready" });
+});
+
+then we are creating a file in k8s folder again name called router-service.yml
+- and in which we are going with the service complete 
+- apiVersion: v1
+kind: Service
+
+metadata:
+  name: router-service
+  labels:
+    app: router
+
+spec:
+  selector:
+    app: router
+
+  type: ClusterIP
+
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+
+      done with the setuping the router-service
+
+      - then we need to set up the ingress 
+      -apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: codespace-ingress
+  labels:
+    app.kubernetes.io/name: codespace-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - pathType: Prefix
+            path: "/api/sandbox"
+            backend:
+              service:
+                name: sandbox-service
+                port:
+                  number: 80
+
+    - host: "*.preview.localhost"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: router-service
+                port:
+                  number: 80
+
+done with the ingress setuping 
+this ingress for what works 
+- the request which cames from the *.preview.localhost port which ends with *.preview.localhost so we forwarding all this requestON THE ROUTER SERVICE 
+
+- after doing the all things we need to see the preview is working or not 
+- our preview is seeing but it reloading again and again the reason is
+- the request comes in the router server 
+- it creates a new proxy for each request 
+- which is not good
+- because of that this problems accures 
+- whenever its creating a new proxy for each request 
+- the limits or memory of http agents is becomes full
+- for stopping away from this 
+- we have to run command firstlly for deleting the deployements 
+- kubectl delete -f ./k8s
+- then in router app.js 
+- i dont want to create a new proxy-each-time 
+- function getProxy(sandboxId) {
+    if (!proxies[sandboxId]) {
+        proxies[sandboxId] = createProxyMiddleware({
+            target,
+            changeOrigin: true,
+            ws: true, 
+        });
+    }
+    return proxies[sandboxId]; 
+}
+- we are doing chashing which is not creating a proxy for each step 
+- and for each sandbox one proxy existed 
+- till tadays class we created a whole functionality kind of we can create a sandbox and into that sandbox we can run our vite development server
+- and we can show the preview of this into the browser 
+- in tommorows class we are watching that how we can update this files and and try to add tailwind into it 
+- then we can crate a whole ui into it 
+- the tailwins is going into the template and using that we can tell to ai that this our thing u have to give output us like this 
+- n the container lot of days request not came so thats why if there is something happening we can able to delete that pod this feature also we have to build it and also we can update the files of it 
