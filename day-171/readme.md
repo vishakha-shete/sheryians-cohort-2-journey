@@ -1,0 +1,32 @@
+# day-171 move next with the existing project 
+- in yesterdays session the sandbox service is able to create a pod and and we gets in return a pod preview url
+- and using that preview url we can access the things
+- in todays class we are learning how sandbox is creating and how can we modifies the file present in it a vite development server
+- in this pod we have a vite development server which is running into container and returning its preview url
+- along with it we created a service the pod which is creating the request reache successfully 
+- in our sandbox we have only one container and in this container runs a vite development server and we can access its preview url
+- what feature we have to develop
+- the vite development server run in which container we are able to make changes into it into that development server in which files runs we can edit them 
+- our vite development server is running into the workspace folder why?
+= in our dockerfile we have workdir as a workspace so here the vite development server is running into the workspace folder 
+- here now we are creating a one new container
+- we have a pod in which we have a one container so i can spin one another container 
+- and it is a express server 
+- we are calling it as a agent name 
+- idealy we can store a one container in one pod but we can add more containers 
+- our files is in the workspace folder so workspace folder is in the container how the second container access the vite development server container 
+- so generally its not possible to acces the things from another container
+- so yess its not happenning 
+- so here we are not creating a workspace folder into the container 
+- the workspace folder is directlly present into the pod 
+- and we are giving the access of workspace folder to the vite development server and the agent 
+- so we need a two container and each one have the workspace folder acces is to the  both containers
+- vite development server is only reading the files present into the workspace folder and serve it into the preview url
+- but the agent it is a express server so it gives us a apis called read files , list files  , updates files , delecte files , create files
+- this agent gives us a some api with this apis we can apple to list read update delete and creates files this files 
+- so how we can doing it ?
+= there is a thing called volume 
+- the folder presents into the contianer it manage by docker volume files is exactlly storing into the pod 
+- whenever the pod delete the files also delting the files never saves 
+- we are creating a agent folder in sandbox folder and setup the server 
+- here we are writing a code in which agent canableto read update delete create the files lists the files 
