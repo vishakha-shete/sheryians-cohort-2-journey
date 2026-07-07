@@ -225,4 +225,48 @@ so now we can access the link and it showing the working
    - so now we said that the agent traffic port is 3000
    - so this time we are sending a request on the agent it goes into the port:3000
    - now i have to create the images again
-   - 
+   - i have to create router sandbox and agent this three images create again
+   - i have to create router sandbox and agent this three images create again
+- created this three images agian and then deleted unwanted things from the docker
+- pods and services
+- then again creating one pod
+- and after creating a pod service is also created
+- but there is problem accures in it like 
+- for that we need to see logs
+- kubectl logs sandbox-pod-019f3c0d-7ea9-72bf-a980-bea2f68d2cd3
+- there is only vite development server not the agent 
+- this is the problem accures when u are working with kubectl for images 
+- pod is created but our agent is not created 
+- in workspace directory folders whe u mount the empty folder with the container workspace 
+- it overrides to the container worspace folder it sync with the container worspace 
+- it dosent work like the workspace folder attatch with it 
+- it sync volume as it is 
+- because of volume is a empty folder thats why workspace also become a empty folder
+- in this image we are running a command in the dockerfile called  npm run dev
+- when we runs this command
+- it goes into the package.json
+- or vite for finding the dev script
+- because this is your workspace folder it doesent exist enything 
+- it doesnt find any package.json file so thats why it gives some errors
+- so lets understand how to fix it
+- there in pods we have some normal containers and init containers
+      initContainers: [
+        {
+          name: "init-container",
+          image: "template",
+          imagePullPolicy: "IfNotPresent",
+          command: ["sh", "-c", "cp -r /workspace/. /seed/"],
+          volumeMounts: [
+            {
+              name: "workspace-volume",
+              mountPath: "/seed"
+            }
+          ]
+        }
+      ],
+- so here the init container is the container where present some containers
+- like in pod the main containers there are two container vite container and and agent container so the init container runs before the all containers
+-  and firstlly it runns and close there the init container work is close 
+- in this container i am using the same template image
+- and again voume same mount just into seed folder
+- we sync the /seed folder with the workspace 
