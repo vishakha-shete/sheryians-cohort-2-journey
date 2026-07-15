@@ -82,3 +82,43 @@
  - you need to focus on the dsa algorithms after aplying to the company research about that company like how many rounds happens in that company 
  - leanr the concept then u just need to 10 12 days to cover the syantax of the any language 
  - just believe in your self and dont be a child right now be the great first
+- if company demand is dsa then he also demanding lld 
+- before moving to the lld you need to habeve knowledge of dsa 
+- need to start dsa earlier
+- it depends its 2 round 3 or 4 maximum 
+- some companies only have one dsa round and they will satisfide like okk your good 
+- you have to reached till tree and graph then give the contest thats very imp rather than you feel demotivated 
+- its need two months to properlly understanding th =e dsa problems and everything 
+- web dev and dsa is totlay different
+- you need to read and understand and solved the problem again and again
+- took a help from chatgpt learn and solve the dsa problems
+- then again go the chat gpt ask for the algorithm only algorithm not code 
+- here is a chnces to make the code if not then go and check the solution
+- in this you need to solved the problems on the pattern based 
+- make your own notes while learning
+- you have to solved the one que u solved today again after 5 days you need to solved that question
+- then again solved same question on day 10 
+- maintaine excell sheet with date along with algorithm and pattern
+- again i get it after 5 days and also by 10 day i am repeatating this cycle challenge yourself 
+- we have a scycological ishue we can forgrt things but we need to remind our mind again and again
+- we need to gave a time to the questions and then question makes if u practice whell
+- dont focus on quentity 
+- focus on clarity
+- daa needs a time if its easy then anyone can do this 
+- there is no alternative option here u need to be a strong in dsa 
+- u came with the time when your whole day goes into that but u need to do it 
+- but after solving that question the confidance is next level 
+- then with the help of that we can solved next four questions also
+- you have to take only help from chat-gpt and solved the dsa problem
+- your parrent have hope from you 
+- please think about your parents and do impossible efforts for them
+- they have invested on u a lot 
+- focus and do things consistentlly you can able to get what u want in your life so dont forget hope 
+
+
+* # DEVENDRA-DHOTE-BHAIYAAA
+- i hope you all are doing great i am ecpecting from u that u all guys learn all the great things from this cohort 
+- you need to take help from ai and make yourself efficiant 
+- in todays market you need to have a skills from basic to advance in todays market u need to know bout the devopse 
+- according to the market chane u need to be prepared 
+- 
