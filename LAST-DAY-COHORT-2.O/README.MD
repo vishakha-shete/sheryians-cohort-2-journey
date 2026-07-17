@@ -121,4 +121,124 @@
 - you need to take help from ai and make yourself efficiant 
 - in todays market you need to have a skills from basic to advance in todays market u need to know bout the devopse 
 - according to the market chane u need to be prepared 
-- 
+
+* # SATWIK-BHAIYAA
+- the first question is 
+- applied for the interships but there is no response from any company
+= yes i want to talk about this go n linkedin naukari along with that another websites are awailable just go theire and check that websites 
+- in any resume there is some thing that recruiter see 
+- firstlly they see you have strong one project in which included full mern stack like all feature is included into that project 
+- then second imp thing is along with this your projects should be scalable also because your skills shows after noticing that 
+- third thing is generative ai if in your resume included it make a coding platform and there is any ishue comes into it if your writing something it suggest what next 
+- if any ishue accures there is ai integrated and ai is telling what exactlly going wrong theire
+- this are things for u can work parallely like devendra bhaiya says make github clone make github like how in any company team work internally the 
+- there are three website which u need to understand
+- y combinator is the first website
+- in y combinator all has a funding 
+- because there team size is small
+- if u have a skill then they are looking for the persons only one thing matter theire is if the person is skilled enough
+- y combinators gives reply within 48 hours rejected or selected 
+- you need apply for fresher role as 0 to 2 years of experience
+- you have to learn there is no value of ur degree u need to master the skills
+- matters is how u communicate perfectlly 
+- secondlly matters how much skills u have 
+- practice machine coding round find out the react and backend question form youtube and chat-gpt
+- if u dont know about syster design then watch the system design videos and understand it 
+- how building system of any website like flipcart github etc
+- if you watch and listen then u can tell ans some questions 
+- so research and learn
+- in our cource we are going to add system design topic in system design section in our corce so stay tunes not in next level but in basics
+- whene u are going for 10 to 12 lpa then theire cames lot of things like
+- gen ai core concepts may be ai engineering need to know dsa need to strong 
+- there will be bonus sessions happenning from tommorow 
+- in which there are soe imp topic we are teaching u 
+- in optimization what are things may included into it 
+- read and drink
+- virtual dom
+- defeang 
+- profile-first
+- in memorization inclueded
+  - react memo
+  - use memo
+  - use callback
+  - avoid function 
+  - inline function
+- in loading and bundling
+  - slpitting
+  - lazy-loading
+  - suspence and error boundries
+  - bundle-size
+- in list and endering 
+  - key props optimization
+  - list virtualization 
+- in state and events  
+  - state and management
+  - context api 
+  - debouncing
+  - throatling 
+- apis data
+  - api optimization
+  - react queary
+- Assets AND VITALS   
+  - image optimization 
+  - web vitals 
+- CONCURRENT-REACT
+  -  TRANSITION
+  - SSR HIDRATION
+  - CONCURRENCY
+- js performance basics
+- component design 
+- interview-questions
+
+- you have to take mehanat on yourself if you have to give 5 % more than others then give it dont think too much just do hard and smart work and grab the apportunity 
+- manage communities create bot for yourself 
+- talk on reddit related to tech with experienced person
+- this how u make things perfect
+- firstlly u have a dsa round then technical interview there are ultiple technical interviews into the company 
+- 1 das 2 web dev round
+- 2 web dev 1 dsa round like this how we go
+- but for this u have to make research on it 
+- send your updated resume hire@sheryians.com
+- for mentore position cohort 2.0 mentor
+
+* # ANKUR-BHAIYAA
+
+- YOUR A DEVELOPER 
+- BUT WHAT CAN HELP U TO GET A JOB 
+- contribute on the open-source project you can learn a lot of things with that 
+- you have to do open source because the first weak of your job 
+- the seniour developer or your team leader go into jeera and he opens a ticket for u 
+- there is one bug user registering but its not registering 
+- fixed this log 
+- how u can fixed this if u dont know how user registering 
+- for simulating this all environment u have to fixed 
+- there is a option called opensource contribution
+-  how u can work after getting a job for preparing that start open source contribution
+- not like we can optimized it on 10x level
+- you need to fixe the small bug small any ishue 
+- there are lot of ishues u feel like u can fixed that ishue then pick that ishue then fixed it and work on it thats it 
+- this is the open source contributer 
+- and trust me companies hires the open source contributer in very high level
+- who makes the contribution on good level
+- this is thing for how many roles for u 
+- the juniour batch i want u all to teach at sheryians as a mentor i want u all to tach ur junior but not in free when ur solving the ishue another person then you became more stronger and i wroked four years as a mentor
+- firstlly i am developer 
+- then became mentore + developer 
+- subinstructor + developer
+- then instrucor + developer 
+- so this is my story whenever u start from mentor 
+- then ur able to solved the problem easily that came from others and also for yourself u can work independlly and solved and debug the ishue 
+- when ur explaining to others that time your own understanding grows on that perticular type 
+- becoming the mentor has more benifits
+- when ur teaching to others then u learn lot of thing by own
+- if u want to understand this things from root then became a mentor first
+- then ur able to understand things very well 
+- those who are intrested just mail us and after interview all thing discussed with u
+- your at this stage now like your developer but not in production level 
+- how u can learn things on production level so after some days ur learning that too
+- open source contribution also ur learning where u can work with team and on github also
+-  there is one thing more called how production handles an ishue there is only option called hackathon
+- participate in hackathon
+- go on devefolio devpost there are best hackathon coming 
+- thre are some hackathon u loose but the time comes when u win  the hackathon so dont worry wotk on yourself 
+- finally end of the golden era but the learning and growing never ends 
