@@ -150,4 +150,71 @@ create file is created
 - the context i gave to it it can read the content present into the node modules folder 
 - in the node modules folder there are many files are present 
 - now it dosent egnore the node modules and dist folder so now it it return a data but the problem is that it return the node modules folder and in node modules folder lot of data is present but the data is not in our use 
-- 
+- so created a list files api again
+app.get("/list-files", async (req, res) => {
+
+    const listFiles = async (dir, baseDir) => {
+
+        const entries = await fs.promises.readdir(dir, {
+            withFileTypes: true,
+        });
+
+        const files = [];
+
+        const excludedDirs = [
+            "node_modules",
+            ".git",
+            "dist",
+            "build",
+            ".next",
+            ".cache",
+        ];
+
+        for (const entry of entries) {
+
+            const fullPath = path.join(dir, entry.name);
+            const relativePath = path.relative(baseDir, fullPath);
+
+            if (
+                entry.isDirectory() &&
+                excludedDirs.includes(entry.name)
+            ) {
+                continue;
+            }
+
+            if (entry.isDirectory()) {
+                files.push(...await listFiles(fullPath, baseDir));
+            } else {
+                files.push(relativePath);
+            }
+        }
+
+        return files;
+    };
+
+    try {
+
+        const files = await listFiles(
+            WORKSPACE_DIR,
+            WORKSPACE_DIR
+        );
+
+        return res.status(200).json({
+            message: "Files listed successfully",
+            files,
+            status: "success",
+        });
+
+    } catch (err) {
+
+        return res.status(500).json({
+            message: `Error listing files: ${err.message}`,
+            status: "error",
+        });
+
+    }
+
+});
+
+- now we are not applying it directlly
+-  we are going with it 
