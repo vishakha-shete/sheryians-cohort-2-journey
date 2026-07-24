@@ -228,4 +228,6 @@ app.get("/list-files", async (req, res) => {
 - so have another api called create files which can create files 
 - but till now we cannot create files into folder
 - so we need to have this functionality as a create files into folder also 
+- for that we need to make some changes into the create files api
+- i want to create new file inside a folder that is not created yet in node.js
 - 3) 
