@@ -263,3 +263,11 @@ app.get("/list-files", async (req, res) => {
 - we are creating it in ai-archistration 
 -  npm i express morgan lagchain @langchain/mistralai @langchain/langgraph dotenv 
 - this are the packages we are installing in it 
+- after that we are creating a express server 
+- now we are using langchain langgraph into it so for that we need to create routes and also along with that creating a folder with the name agents
+- in which we are creating a multiple tools 
+- multiple agents are creating into it 
+- in agents folder creating a file nae called code.agent.js and also it has some tools so for that we are creating a file called tools.js and tools are creating using axios for that we need to install axios 
+- firstlly we need to create some tools 
+- axios
+- one tool i am creating and for creating that tool 
