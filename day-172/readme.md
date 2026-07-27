@@ -271,3 +271,52 @@ app.get("/list-files", async (req, res) => {
 - firstlly we need to create some tools 
 - axios
 - one tool i am creating and for creating that tool 
+- then we have to till now we are going with hard coded one api 
+- we are calling one api on postman it list the present files into the container 
+- so i am hitting only this file and this api 
+- http://019f9904-a10a-706b-8a76-5a0cfc8b31c0.agent.localhost/list-files
+- this api return like in this format 
+- {
+    "message": "Files listed successfully",
+    "files": [
+        ".dockerignore",
+        ".gitignore",
+        ".oxlintrc.json",
+        "README.md",
+        "dockerfile",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public/favicon.svg",
+        "public/icons.svg",
+        "src/App.css",
+        "src/App.jsx",
+        "src/assets/hero.png",
+        "src/assets/react.svg",
+        "src/assets/vite.svg",
+        "src/index.css",
+        "src/main.jsx",
+        "vite.config.js"
+    ],
+    "status": "success"
+}
+- similiar way we need to tell the schema how our schema whant s data into it so our tool is helping into this 
+- there we are using one another tool called zod so we need to install this 
+- firstlly we can revised what exactlly we done till now 
+- till now we have one main contaniner in which our vite dev server is running in which the workspace folder and agent sidecar workspace folder we snc this two folder with each other with the help of workspace-volume now in todays class in agent we created a some apis read-file, list-files,update-files,create-files
+- we created this apis 
+1) list-files : this in workspace folder the files present and list all the files present in the workspace folder 
+- then again we created a read files api this api needs only file name it gives the content in return
+- then again created a update files api it need the file and content for update and then it updates the content 
+- then again one api is present name called create file api it creates a file 
+- and this all operations into the workspace folder 
+- this all things we are doing into the workspace folder 
+- now we are creating one more service 
+- the ai orchestration and this service where the preview is running the frontent is showing it can be update that 
+- so now we are creating the ai orchesration service and with the help of ai it can be update the content present into the because the ai used the tools of ai and with the help of ai we can create tools 
+- so now we are creating tools 
+- the first tool can list the files 
+- and the another tool we are creating is that 
+- now we listed two apis in tools one is read file and list files there still pending is the update file or create file 
+- 
+
