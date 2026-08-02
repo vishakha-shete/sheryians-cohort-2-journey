@@ -31,4 +31,7 @@ CMD [ "npm", "run","dev"]
 - in artifacts our first artifact is image 
 - image name is ai-orchestration
 - there is one thing you need to remember that in your k8s folder the deployement file goes that you need to paased the same name which in that file
+- firstlly we are creating a deployement file of ai-orchestration
+- after that we are creating a service file 
+- then we are coming to the ingress and there we are creating one rule 
 - 
