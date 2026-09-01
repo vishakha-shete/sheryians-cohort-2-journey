@@ -4,6 +4,7 @@
 - firstlly understanding what is skaffold??
 - skaffold is a development tool
 - whenever your working with the kuberneties that time it is usable 
+- skaffold waches your file and sync changes into directlly into container then it automtically desides to make the images the development s
 - skaffolds solves a problem if in your file system or server you change any code so for any code you have to make image and with the help of kuberneties deploye again 
 - but skaffold watch the develpment time changes each time so if it find any chnages into server then it desides by there own he needs to make new image or depploye it in containers its running with development its preety much easier 
 - for installing skaffold with the help of cocoed u can install it in windows
@@ -34,4 +35,7 @@ CMD [ "npm", "run","dev"]
 - firstlly we are creating a deployement file of ai-orchestration
 - after that we are creating a service file 
 - then we are coming to the ingress and there we are creating one rule 
+- then our ingress rule is expanding the notification services increase then inngress rules also increases 
+- folder also increases 
+- after doning the ingress setup we are coming to the skaffold.yml
 - 
