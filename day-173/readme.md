@@ -38,4 +38,31 @@ CMD [ "npm", "run","dev"]
 - then our ingress rule is expanding the notification services increase then inngress rules also increases 
 - folder also increases 
 - after doning the ingress setup we are coming to the skaffold.yml
-- 
+- in skaffold we need to go with the same image name rather its creating a problem foerward 
+- we are adding image name with in which folder the image is present 
+- in artiffacts we are adding firstlly a image and and which name image is created and secondlly is a context which means a folder name in which folder we find a docker file that folder whole path 
+- after that we are creating a one more image with the name agent context : sandbox/agent docker is : dockerfile similiarly for router after router comes server so server image name is sandbox adding image : sandbox content: sandbox/server and lastlly we have a template so we are going into template then into it 
+
+image: template
+context: sandbox/template
+docker : 
+dockerfile: dockerfile
+- till now we not created the auth or notification so that not come into it rather all are in 
+- so here we created a images still there are some things requires 
+- FOR MAKING IT LIVE WE ARE USING MANIFEST 
+rawml: and in it the files present in the k8s folder listing all files here 
+
+
+in skaffold the things u written in this firstlly images are creating and then other files are run 
+- in skaffold there is one thing which is very beautifull in which we can sync the things 
+- - i will be using the sync property 
+sync:
+ manual:
+ -src: 'src/**'
+ dest: "app/src"
+
+ so the things we edited in to the src folder sync into the the app src 
+ - now everything runs perfectlly 
+ - the ai server router server sandbox server runs perfectlly now
+ - we can able t see the logs here and the good thing in it is 
+ - for recognize the instant changes we are adding infer into skaffold replasing manual 
