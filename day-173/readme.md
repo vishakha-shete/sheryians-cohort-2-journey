@@ -64,5 +64,16 @@ sync:
  so the things we edited in to the src folder sync into the the app src 
  - now everything runs perfectlly 
  - the ai server router server sandbox server runs perfectlly now
- - we can able t see the logs here and the good thing in it is 
+ - we can able to see the logs here and the good thing in it is 
  - for recognize the instant changes we are adding infer into skaffold replasing manual 
+ - infer understand bythemselves what to do 
+ - after adding infer it shows how we can 
+ - it makes the all files sync perfectlly 
+ - yesterday the functionality we build of ai in that code.agents.js 
+ - here we are seeing how to manage the .env file how we can manage the secrets 
+ - for that we need to run one or two commands little bit we neet do setup but it will done 
+ - till now we have created the ai agent and it has the some tools access also now i am using postman for creating one project 
+ - let just some fixes 
+ - in yesterdays class our website it will refreshing agai and again for stopping that we need to do changes into vite.config.js by adding watch adding usepolling :true interval:300 ignored: {'node_modules'}
+ - why that triggers reload again and again because when we use node js or fs ussing updating a files which we are doing and which we aften do using node js we update the files in that multiple events ralease vite development server catch that and triggers on the frontend thats why we are watching it again and again 
+ - i am just ctr+c and just run skaffold dev 
