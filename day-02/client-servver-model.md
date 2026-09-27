@@ -1,0 +1,22 @@
+- day-2 of learning the client server model concept
+- hello welcome guysssss..!
+- client-server-model it also known as client server architecture 
+- client server model exactlly hota kya isape baat krenge mere pyare bhaiyoo meri baat suno yahape dekho is class me jo bi padhaunga usaki brief surface level information main aapko de raha hunga agar ye sun li jo ab batane vala hun to class puri samajh aayegi agar ye sunali jo ab batane vala hun kya tun mere sath ho agale 2 minute 
+- ab meri bat suno to ye aap ho or ye sheryians.com hain aap sheryians,com se kaise is lecture ko dekh pa rahe ho  usake behind the scene kya kya lag gaya kya kya chije huiee vo sab kuch client server model hain aajaki puri class isi pe hain aajaki puri class isake bare me bhi hain ki aapane amazon.com type kiya our amazon khul gaya aajaki class isake bare me bhi hain ki youu tube.com type kiya our vo khul gaya aajaki class isake bare me bhi hain aap kisiko message bheje our vo chala jayen aajaki class isake bare me bhi hain tum is chat pr likh rahe ho our vo aa raha hain 
+- kya tum meri bat samajh pa rahe ho to aajaki class hain ki actually me tumhara mobile phone tumhara desktop sheryians.com se leke youtube.com tak baat kaise krta hain kya mere bhaio kya aapko ye samajh aaya muze bataoo come on guyss batao muze 
+- everybody here todays class is all about how client and server talks 
+- so hota kya hai ye ek aapaka mobile phone hain aapne type kiya sheryians.com yaha se maine bataya ki aapaki kahani shuru hoti hain packets packets se data pohachta hain tower tak trough electricals signal it reached to the jio (isp) and then jio goes to the dns and then dns check for ip address and then the dns forwards the ip address through routing this is all we talk in previous class in todays batcheet is all about client-server-model 
+- so client and server two different words client client means your mobile phone , laptop client aapka ek google chrome ka browser hain jisape aap ye lecture dekh rahe ho 
+- to sir client mera laptop hain ya chrome hain
+-  to client hum device ke context main bhi bolate hai our clients hum software ke context se bhi bolate hain anything jo user operate krta hain use client kehate hain 
+- didi i have by one watch and from that watch i can run the internet to kya vo client hai yesss vo client hain 
+- our mere pass ek chatasa phone hain usape internet chalata hain kya vo bhi client hai ha vo bhi client hain 
+- iphone also yess
+- laptop also yess
+- anything which  users control  and runs a internet is called client 
+- anything jo users control krte hai and jisase internet connected hain use client kehate hain
+- any device jisape internet chalega that is a client 
+- what is the server ?
+- ek computer system jo internet se connected hain and jise program kiya gaya hain 
+- client= user side (browser.mobile app,etc)
+ -
