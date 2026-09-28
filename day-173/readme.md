@@ -76,4 +76,36 @@ sync:
  - let just some fixes 
  - in yesterdays class our website it will refreshing agai and again for stopping that we need to do changes into vite.config.js by adding watch adding usepolling :true interval:300 ignored: {'node_modules'}
  - why that triggers reload again and again because when we use node js or fs ussing updating a files which we are doing and which we aften do using node js we update the files in that multiple events ralease vite development server catch that and triggers on the frontend thats why we are watching it again and again 
- - i am just ctr+c and just run skaffold dev 
+ - i am just ctr+c and just run skaffold dev then my all development run and live preview also working but the problem comes into the sir code that image is creating skaffold with different path so they are figuring out and fixing the things perfectlly 
+ - for same path it uses a tagPolicy:
+    sha256: {}
+- then all images creating with the same path :latest 
+- then after i add this but my live not working so i go without adding the tagpollicy 
+- now we need to create a api 
+- so firstlly we are creating one api which is on the ai agent 
+- this api on the our ai-agent 
+- so we allready has a code agent and and one agent 
+- hum system prompt to dekhenge hi dekhenge abhi hum bina system prompt ke try krte hain 
+- bina syster prompt ke vo kya kya kr pa raha hai vo bhi hum dekhenge + mistral hame ek model our deta hain jo ki coding vale isame bohot acha hain to usako bhi hum try krenge before that in our tools all things are hard coded and just now we are chaning this all so we can change them 
+- to yahape jo mere pass ek id aayi hain in postman 
+- "sandboxId": "01a0e786-fd2c-701c-9461-7fe65f65984f",
+- with this id i am changing with 
+- because the id allready present is previos sandbox id just replace the id with todays sandbox id
+- overall everything stay as it is 
+- so the agent i exported for that i am creating one api in src creating a folder with the name routes and in this folder creating a file with the name agent.routes.js
+- then we created an api after than we run command skaffold.dev
+- then with the help of postman we are sending the request 
+- but the ai deployement only 2 out of 3 the reason because of mistral api key 
+- so now we are understanding the how we can store and manage the mistral api key or the  secretes 
+- for storing api secretes we need to run some commands
+- we are adding the api key using this secrete command
+- kubectl create secret generic ai-secret `
+  --from-literal=MISTRAL_API_KEY="YOUR_NEW_MISTRAL_API_KEY"
+-   - using this command we are changing some things in the deployement file 
+- in k8s folder in deployement file we are updating some things 
+- there is another property come with the name env 
+- env : 
+    name: ai-secret
+    valueform:
+     secretkeyRef:
+     
