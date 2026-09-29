@@ -104,8 +104,30 @@ sync:
 -   - using this command we are changing some things in the deployement file 
 - in k8s folder in deployement file we are updating some things 
 - there is another property come with the name env 
-- env : 
-    name: ai-secret
-    valueform:
-     secretkeyRef:
-     
+      env:
+          - name: MISTRAL_API_KEY
+            valueFrom:
+             secretKeyRef:
+              name: ai-secret
+              key: MISTRAL_API_KEY
+- using command we run skaffold.dev
+- and then everything works fine
+- now i am sending a one request using postman 
+- we are sending request on preview api/start
+- the vite server runs perfectlly 
+- then lets ceck invoke the request 
+- but the api request filed and get error on invoke 
+- mistral ai limit exceeded i guess
+- one minute why its giving the arror 
+- a its running the tool after setting up perfectlly the api 
+- now it will create something only runns using list files tools and stopped i again sending requuest now showinng using list files tools 
+- letss see whats the problem actually going into it 
+- the system of ai and everything is into the clusster the system belongs into the cluster 
+- the problem is the ai and the tools are present and this api are hitting that is localhost/listfiles like something 
+- it using localhost but like that anything is not exists 
+- in cluster anything is not exists like this
+- so your in allready in cluster so thats why u cannot hit the localhost type apis 
+- the ai-service has another different conatiner so the the localhost of this is different and the pod localhost is different 
+- so your present in ai-orchestration your trying to hit the localhost from theire then how it is possible its hitting only the ai-orchestration own localhost again and again so he cant do it by own 
+- so we need to make changes for hitting it with agent pod 
+- so we have the service deployement there is another service called sandbox-service if i request on it on port number 3000 so it will goes to the agent so i need to replcae the localhost with the port 3000
